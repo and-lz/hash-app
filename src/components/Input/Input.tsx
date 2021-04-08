@@ -9,8 +9,8 @@ interface InputProps {
 
 function Input({ type = 'text', label, required, addon }: InputProps) {
   return <>
-    <label>{label} {required && "*"}</label>
-    <input required={required} type={type} />
+    <label>{label} {required && "*"}</label> <br />
+    <input required={required} type={type} /> <br />
     {addon && <span>{addon}</span>}
   </>
 }
