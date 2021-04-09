@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Addon, InputField, Label } from './Input.styles';
 
 interface InputProps {
   type?: "text" | "number"
@@ -11,10 +12,9 @@ interface InputProps {
 
 function Input({ type = 'text', label, required, addon, value, onChange }: InputProps) {
   return <>
-    <label>{label} {required && "*"}</label> <br />
-    <input required={required} value={value} onChange={e => onChange(e.currentTarget.value)} type={type} /> <br />
-    {addon && <div>{addon}</div>}
-    <hr />
+    <Label>{label} {required && "*"}</Label>
+    <InputField required={required} value={value} onChange={e => onChange(e.currentTarget.value)} type={type} /> <br />
+    {addon && <Addon>{addon}</Addon>}
   </>
 }
 

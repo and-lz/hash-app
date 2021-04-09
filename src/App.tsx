@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Heading1, Heading2 } from './components/ds/Typography/Headings'
+import { HighlightText } from './components/ds/Typography/Paragraph'
 import Input from './components/Input/Input'
 import APIAntecipation from './infrastructure/api/API/APIAntecipation/APIAntecipation'
 
@@ -27,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        <h1>Simule sua antecipação</h1>
+        <Heading1>Simule sua antecipação</Heading1>
         <Input
           onChange={(value: string) => setAmount(value)}
           required
@@ -50,11 +52,11 @@ function App() {
         <button onClick={callAPI}>consultar</button>
       </div>
       <div>
-        <h2>Você receberá:</h2>
-        <p>Amanhã: R$ 0</p>
-        <p>Em 15 dias: R$ {data['30']}</p>
-        <p>Em 30 dias: R$ {data['60']}</p>
-        <p>Em 90 dias: R$ {data['90']}</p>
+        <Heading2>Você receberá:</Heading2>
+        <HighlightText>Amanhã: R$ 0</HighlightText>
+        <HighlightText>Em 15 dias: R$ {data['30']}</HighlightText>
+        <HighlightText>Em 30 dias: R$ {data['60']}</HighlightText>
+        <HighlightText>Em 90 dias: R$ {data['90']}</HighlightText>
       </div>
     </div>
   )
