@@ -8,7 +8,7 @@ export const FlatButton = styled.button<FlatButtonProps>`
   border-radius: 999px;
   background: #5d9cec;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 60px;
   font-size: 16px;
   font-family: Source Sans Pro;
   font-style: normal;
