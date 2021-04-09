@@ -1,12 +1,20 @@
 import React, { useState } from 'react'
-import { Card, CardHighlight, CardMainContent } from './components/design-system/Card/Card'
-import { Spacer } from './components/design-system/Spaces/Spaces'
-import { Heading1, Heading2 } from './components/design-system/Typography/Headings'
-import { HighlightText } from './components/design-system/Typography/Paragraph'
-import Input from './components/Input/Input'
-import APIAntecipation from './infrastructure/api/API/APIAntecipation/APIAntecipation'
+import {
+  Card,
+  CardHighlight,
+  CardMainContent,
+} from '../../components/design-system/Card/Card'
+import { Spacer } from '../../components/design-system/Spaces/Spaces'
+import {
+  Heading1,
+  Heading2,
+} from '../../components/design-system/Typography/Headings'
+import { HighlightText } from '../../components/design-system/Typography/Paragraph'
+import Input from '../../components/Input/Input'
+import APIAntecipation from '../../infrastructure/api/API/APIAntecipation/APIAntecipation'
+import { Page } from './Home.styles'
 
-function App() {
+function HomePage() {
   const [amount, setAmount] = useState('2000')
   const [installments, setInstallments] = useState('12')
   const [mdr, setMdr] = useState('5')
@@ -28,7 +36,7 @@ function App() {
   }
 
   return (
-    <>
+    <Page>
       <Card width="608px">
         <CardMainContent width="377px">
           <Heading1>Simule sua antecipação</Heading1>
@@ -63,8 +71,8 @@ function App() {
           <HighlightText>Em 90 dias: R$ {data['90']}</HighlightText>
         </CardHighlight>
       </Card>
-    </>
+    </Page>
   )
 }
 
-export default App
+export default HomePage

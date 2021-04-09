@@ -17,7 +17,7 @@ interface CardAreaProps {
   width?: string
 }
 export const CardArea = styled.div<CardAreaProps>`
-  flex-basis: ${props => props.width};
+  width: ${props => props.width};
 `
 
 export const CardMainContent = styled(CardArea)`
