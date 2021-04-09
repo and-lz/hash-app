@@ -1,5 +1,10 @@
 import { colors } from './colors'
+import { duration, easing } from './motion'
 
 export default {
-  colors: colors,
+  colors,
+  motion: {
+    easing,
+    duration,
+  },
 }

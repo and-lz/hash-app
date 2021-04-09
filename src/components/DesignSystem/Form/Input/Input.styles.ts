@@ -11,7 +11,7 @@ export const InputField = styled.input`
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  transition: all 200ms ease;
+  transition: all ${DesignSystem.motion.duration} ${DesignSystem.motion.easing};
   display: block;
   width: 100%;
   &:focus {

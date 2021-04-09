@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import DesignSystem from '..'
 
 interface FlatButtonProps {
   onClick: Function
@@ -13,7 +14,7 @@ export const FlatButton = styled.button<FlatButtonProps>`
   font-family: Source Sans Pro;
   font-style: normal;
   border: 0;
-  transition: all 250ms ease;
+  transition: all ${DesignSystem.motion.duration} ${DesignSystem.motion.easing};
   &:hover {
     filter: brightness(110%);
   }
