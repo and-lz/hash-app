@@ -20,6 +20,11 @@ export const InputField = styled.input`
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
+  transition: all 200ms ease;
+  &:focus {
+    outline: 0;
+    border-color: #66AFE9;
+  }
 `
 
 export const Addon = styled.div`
