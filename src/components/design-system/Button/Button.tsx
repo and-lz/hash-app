@@ -1,7 +1,7 @@
 import React from 'react'
 import { FlatButton } from './Button.styles'
 
-interface ButtonProps {
+interface ButtonProps extends Partial<HTMLButtonElement> {
   label: string
   onClick: Function
 }

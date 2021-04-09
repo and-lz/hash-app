@@ -5,6 +5,7 @@ import {
   CardHighlight,
   CardMainContent,
 } from '../../components/design-system/Card/Card'
+import Loader from '../../components/design-system/Loader/Loader'
 import Modal from '../../components/design-system/Modal/Modal'
 import { Spacer } from '../../components/design-system/Spaces/Spaces'
 import {
@@ -18,6 +19,7 @@ import { Page } from './Home.styles'
 
 function HomePage() {
   const [showNoConnectionModal, setShowNoConnectionModal] = useState(false)
+  const [loadingProgress, setLoadingProgress] = useState(0)
   const [amount, setAmount] = useState('2000')
   const [installments, setInstallments] = useState('12')
   const [mdr, setMdr] = useState('5')
@@ -29,22 +31,27 @@ function HomePage() {
   })
 
   const callApiAntecipationService = async function () {
+    setLoadingProgress(0)
     if (!navigator.onLine) {
       setShowNoConnectionModal(true)
       return
     }
 
+    setLoadingProgress(50)
     const responseAPIAntecipation = await APIAntecipation({
       amount,
       installments,
       mdr,
       days: [30, 60, 90],
     })
+    setLoadingProgress(75)
     setData(responseAPIAntecipation.data)
+    setLoadingProgress(100)
   }
 
   return (
     <Page>
+      <Loader size={loadingProgress} />
       <Modal
         visible={showNoConnectionModal}
         title="Você está sem conexão"
@@ -56,29 +63,40 @@ function HomePage() {
       <Card width="608px">
         <CardMainContent width="377px">
           <Heading1>Simule sua antecipação</Heading1>
-          <Input
-            onChange={(value: string) => setAmount(value)}
-            required
-            label="Informe o valor da renda"
-            value={amount}
-          />
-          <Spacer />
-          <Input
-            onChange={(value: string) => setInstallments(value)}
-            required
-            label="Em quantas parcelas"
-            value={installments}
-            addon="Máximo de 12 parcelas"
-          />
-          <Spacer />
-          <Input
-            onChange={(value: string) => setMdr(value)}
-            required
-            label="Informe o percentual de MDR"
-            value={mdr}
-          />
-          <Spacer />
-          <Button label="Consultar" onClick={callApiAntecipationService} />
+          <form
+            onSubmit={e => {
+              e.preventDefault()
+              callApiAntecipationService()
+            }}
+          >
+            <Input
+              onChange={(value: string) => setAmount(value)}
+              required
+              label="Informe o valor da renda"
+              value={amount}
+            />
+            <Spacer />
+            <Input
+              onChange={(value: string) => setInstallments(value)}
+              required
+              label="Em quantas parcelas"
+              value={installments}
+              addon="Máximo de 12 parcelas"
+            />
+            <Spacer />
+            <Input
+              onChange={(value: string) => setMdr(value)}
+              required
+              label="Informe o percentual de MDR"
+              value={mdr}
+            />
+            <Spacer />
+            <Button
+              onClick={callApiAntecipationService}
+              type="submit"
+              label="Consultar"
+            />
+          </form>
         </CardMainContent>
         <CardHighlight width="231px">
           <Heading2>Você receberá:</Heading2>
