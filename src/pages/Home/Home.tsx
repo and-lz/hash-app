@@ -5,6 +5,7 @@ import {
   CardHighlight,
   CardMainContent,
 } from '../../components/DesignSystem/Card/Card'
+import { Form } from '../../components/DesignSystem/Form/Form'
 import Loader from '../../components/DesignSystem/Loader/Loader'
 import Modal from '../../components/DesignSystem/Modal/Modal'
 import { Spacer } from '../../components/DesignSystem/Spaces/Spaces'
@@ -90,9 +91,9 @@ function HomePage() {
       <Card width="608px">
         <CardMainContent width="377px">
           <Heading1>Simule sua antecipação</Heading1>
-          <form
+          <Form
             id="form"
-            onSubmit={e => {
+            onSubmit={(e: React.FormEvent<HTMLInputElement>) => {
               e.preventDefault()
               checkFormValidity()
             }}
@@ -129,7 +130,7 @@ function HomePage() {
               type="submit"
               label="Consultar"
             />
-          </form>
+          </Form>
         </CardMainContent>
         <CardHighlight width="231px">
           <Heading2>Você receberá:</Heading2>
