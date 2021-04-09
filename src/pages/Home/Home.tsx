@@ -5,6 +5,7 @@ import {
   CardHighlight,
   CardMainContent,
 } from '../../components/DesignSystem/Card/Card'
+import { Divider } from '../../components/DesignSystem/Divider/Divider'
 import { Form } from '../../components/DesignSystem/Form/Form'
 import Loader from '../../components/DesignSystem/Loader/Loader'
 import Modal from '../../components/DesignSystem/Modal/Modal'
@@ -135,6 +136,7 @@ function HomePage() {
         </CardMainContent>
         <CardHighlight width="231px">
           <Heading2>Você receberá:</Heading2>
+          <Divider />
           <HighlightText>Amanhã: R$ 0</HighlightText>
           <HighlightText>Em 15 dias: R$ {antecipationData['30']}</HighlightText>
           <HighlightText>Em 30 dias: R$ {antecipationData['60']}</HighlightText>

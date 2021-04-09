@@ -7,4 +7,5 @@ export const colors = {
   alto: '#cecece',
   mystic: '#dde6e9',
   cornflowerBlue: '#66afe9',
+  cornflowerBlue2: '#5D9CEC',
 }
