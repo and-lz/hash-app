@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import DesignSystem from '../..'
 
 export const FormLabel = styled.label`
   display: block;
@@ -16,5 +17,5 @@ export const FormLabelAddOn = styled.div`
   font-weight: bold;
   font-size: 11px;
   line-height: 14px;
-  color: #cecece;
+  color: ${DesignSystem.colors.alto};
 `

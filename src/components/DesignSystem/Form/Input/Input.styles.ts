@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import DesignSystem from '../..'
 
 export const InputField = styled.input`
   padding: 10px;
   font-size: 14px;
-  border: 1px solid #dde6e9;
+  border: 1px solid ${DesignSystem.colors.mystic};
   border-radius: 4px;
   font-family: Source Sans Pro;
   font-style: normal;
@@ -15,7 +16,7 @@ export const InputField = styled.input`
   width: 100%;
   &:focus {
     outline: 0;
-    border-color: #66afe9;
+    border-color: ${DesignSystem.colors.cornflowerBlue}};
   }
   &:invalid {
     border-color: red;
