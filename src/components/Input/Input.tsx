@@ -14,6 +14,7 @@ interface InputProps {
   onChange: Function
   min?: number
   max?: number
+  placeholder?: 'string'
 }
 
 function Input({

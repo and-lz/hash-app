@@ -17,4 +17,7 @@ export const InputField = styled.input`
     outline: 0;
     border-color: #66afe9;
   }
+  &:invalid {
+    border-color: red;
+  }
 `
