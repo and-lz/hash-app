@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
-import Button from '../../components/design-system/Button/Button'
+import Button from '../../components/DesignSystem/Button/Button'
 import {
   Card,
   CardHighlight,
   CardMainContent,
-} from '../../components/design-system/Card/Card'
-import Loader from '../../components/design-system/Loader/Loader'
-import Modal from '../../components/design-system/Modal/Modal'
-import { Spacer } from '../../components/design-system/Spaces/Spaces'
+} from '../../components/DesignSystem/Card/Card'
+import Loader from '../../components/DesignSystem/Loader/Loader'
+import Modal from '../../components/DesignSystem/Modal/Modal'
+import { Spacer } from '../../components/DesignSystem/Spaces/Spaces'
 import {
   Heading1,
   Heading2,
-} from '../../components/design-system/Typography/Headings'
-import { HighlightText } from '../../components/design-system/Typography/Paragraph'
+} from '../../components/DesignSystem/Typography/Headings'
+import { HighlightText } from '../../components/DesignSystem/Typography/Paragraph'
 import Input from '../../components/Input/Input'
 import APIAntecipation from '../../infrastructure/api/API/APIAntecipation/APIAntecipation'
 import { Page } from './Home.styles'

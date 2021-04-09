@@ -1,5 +1,9 @@
 import React from 'react'
-import { Addon, InputField, Label } from './Input.styles'
+import { InputField } from '../DesignSystem/Form/Input/Input.styles'
+import {
+  FormLabelAddOn,
+  FormLabel,
+} from '../DesignSystem/Form/Label/Label.styles'
 
 interface InputProps {
   type?: 'text' | 'number'
@@ -24,9 +28,9 @@ function Input({
 }: InputProps) {
   return (
     <>
-      <Label>
+      <FormLabel>
         {label} {required && '*'}
-      </Label>
+      </FormLabel>
       <InputField
         min={min}
         max={max}
@@ -35,7 +39,7 @@ function Input({
         onChange={e => onChange(e.currentTarget.value)}
         type={type}
       />
-      {addon && <Addon>{addon}</Addon>}
+      {addon && <FormLabelAddOn>{addon}</FormLabelAddOn>}
     </>
   )
 }
