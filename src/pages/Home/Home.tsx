@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Button from '../../components/design-system/Button/Button'
 import {
   Card,
   CardHighlight,
@@ -16,7 +17,7 @@ import APIAntecipation from '../../infrastructure/api/API/APIAntecipation/APIAnt
 import { Page } from './Home.styles'
 
 function HomePage() {
-  const [showModal, setModal] = useState(false)
+  const [showNoConnectionModal, setShowNoConnectionModal] = useState(false)
   const [amount, setAmount] = useState('2000')
   const [installments, setInstallments] = useState('12')
   const [mdr, setMdr] = useState('5')
@@ -28,6 +29,11 @@ function HomePage() {
   })
 
   const callAPI = async function () {
+    if (!navigator.onLine) {
+      setShowNoConnectionModal(true)
+      return
+    }
+
     const response = await APIAntecipation({
       amount,
       installments,
@@ -40,10 +46,10 @@ function HomePage() {
   return (
     <Page>
       <Modal
-        visible={showModal}
+        visible={showNoConnectionModal}
         title="Você está sem conexão"
         onClose={() => {
-          setModal(false)
+          setShowNoConnectionModal(false)
         }}
         content="Para consultar os valores, é necessário conexão. Por favor, tente mais tarde."
       />
@@ -71,7 +77,8 @@ function HomePage() {
             label="Informe o percentual de MDR"
             value={mdr}
           />
-          <button onClick={() => setModal(true)}>consultar</button>
+          <Spacer />
+          <Button label="Consultar" onClick={callAPI} />
         </CardMainContent>
         <CardHighlight width="231px">
           <Heading2>Você receberá:</Heading2>
