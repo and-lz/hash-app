@@ -22,13 +22,13 @@ describe('APIAntecipation', () => {
   beforeEach(async () => {
     await APIAntecipation(params)
   })
-  it('Should Call Service With Correct URL And Parameters Passed', async () => {
+  it('Should call api with correct url and parameters passed', async () => {
     expect(axios.post).toBeCalledWith(URL, params)
   })
-  it('Should not Call Service With Get Method', async () => {
+  it('Should not call api with get method', async () => {
     expect(axios.get).toBeCalledTimes(0)
   })
-  it('Should Convert Params To The Expected Format', async () => {
+  it('Should convert params to the expected format', async () => {
     await APIAntecipation(paramsWithWrongTypes)
     expect(axios.post).toHaveBeenLastCalledWith(URL, params)
   })

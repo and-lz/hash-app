@@ -29,10 +29,12 @@ function Input({
 }: InputProps) {
   return (
     <>
-      <FormLabel>
+      <FormLabel htmlFor={`${label} field`}>
         {label} {required && '*'}
       </FormLabel>
       <InputField
+        data-testid="input-field"
+        id={`${label} field`}
         min={min}
         max={max}
         required={required}
