@@ -82,6 +82,9 @@ function HomePage() {
               label="Em quantas parcelas"
               value={installments}
               addon="Máximo de 12 parcelas"
+              type="number"
+              min={1}
+              max={12}
             />
             <Spacer />
             <Input
@@ -89,6 +92,8 @@ function HomePage() {
               required
               label="Informe o percentual de MDR"
               value={mdr}
+              type="number"
+              min={0}
             />
             <Spacer />
             <Button

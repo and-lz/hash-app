@@ -8,6 +8,8 @@ interface InputProps {
   addon?: string
   value?: string
   onChange: Function
+  min?: number
+  max?: number
 }
 
 function Input({
@@ -16,6 +18,8 @@ function Input({
   required,
   addon,
   value,
+  min,
+  max,
   onChange,
 }: InputProps) {
   return (
@@ -24,6 +28,8 @@ function Input({
         {label} {required && '*'}
       </Label>
       <InputField
+        min={min}
+        max={max}
         required={required}
         value={value}
         onChange={e => onChange(e.currentTarget.value)}
