@@ -10,15 +10,23 @@ interface ModalProps {
   content?: string
   visible: boolean
   onClose: Function
+  action?: string
 }
 
-function Modal({ title, content, visible, onClose }: ModalProps) {
+function Modal({
+  title,
+  content,
+  visible,
+  onClose,
+  action = 'Fechar',
+}: ModalProps) {
   const [showModal, setShowModal] = useState(visible)
 
   useEffect(() => {
     setShowModal(visible)
   }, [visible])
 
+  if (!showModal) return <></>
   return (
     <>
       <ModalBackground visible={showModal}>
@@ -27,7 +35,7 @@ function Modal({ title, content, visible, onClose }: ModalProps) {
           <Text>{content}</Text>
           <Spacer size="big" />
           <Button
-            label="Ok, tentar mais tarde"
+            label={action}
             onClick={() => {
               setShowModal(false)
               onClose()

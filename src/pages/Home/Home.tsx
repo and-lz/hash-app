@@ -15,7 +15,7 @@ import {
 } from '../../components/DesignSystem/Typography/Headings'
 import { HighlightText } from '../../components/DesignSystem/Typography/Paragraph'
 import Input from '../../components/Input/Input'
-import APIAntecipation from '../../infrastructure/api/API/APIAntecipation/APIAntecipation'
+import APIAntecipation from '../../infrastructure/api/APIAntecipation/APIAntecipation'
 import { Page } from './Home.styles'
 
 function HomePage() {
@@ -85,7 +85,7 @@ function HomePage() {
         onClose={() => {
           setShowErrorModal(false)
         }}
-        content="Por favor, tente mais tarde."
+        content="Aconteceu algum erro de servidor, não sendo possível completar sua solicitação. Por favor, tente mais tarde."
       />
 
       <Card width="608px">
