@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios'
 
-const URL = 'https://frontend-challenge-7bu3nxh76a-uc.a.run.app?timeout'
+const URL = 'https://frontend-challenge-7bu3nxh76a-uc.a.run.app'
 
 interface APIAntecipationProps {
   amount: number | string
@@ -16,9 +16,9 @@ async function APIAntecipation({
   days,
 }: APIAntecipationProps): Promise<AxiosResponse<any>> {
   return await axios.post(URL, {
-    amount,
-    installments,
-    mdr,
+    amount: Number(amount),
+    installments: Number(installments),
+    mdr: Number(mdr),
     days,
   })
 }

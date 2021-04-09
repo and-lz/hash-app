@@ -22,9 +22,10 @@ function HomePage() {
   const [showNoConnectionModal, setShowNoConnectionModal] = useState(false)
   const [showErrorModal, setShowErrorModal] = useState(false)
   const [loadingProgress, setLoadingProgress] = useState(0)
+
   const [amount, setAmount] = useState('2000')
   const [installments, setInstallments] = useState('12')
-  const [mdr, setMdr] = useState('5')
+  const [mdr, setMdr] = useState('1')
 
   const [antecipationData, setAntecipationData] = useState({
     30: 0,

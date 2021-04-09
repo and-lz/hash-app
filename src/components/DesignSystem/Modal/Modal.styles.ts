@@ -17,7 +17,7 @@ export const ModalBackground = styled.div<ModalProps>`
   width: 100%;
   height: 100%;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   padding: 60px 100px 0;
