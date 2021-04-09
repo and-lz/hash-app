@@ -4,6 +4,7 @@ import {
   CardHighlight,
   CardMainContent,
 } from '../../components/design-system/Card/Card'
+import Modal from '../../components/design-system/Modal/Modal'
 import { Spacer } from '../../components/design-system/Spaces/Spaces'
 import {
   Heading1,
@@ -15,6 +16,7 @@ import APIAntecipation from '../../infrastructure/api/API/APIAntecipation/APIAnt
 import { Page } from './Home.styles'
 
 function HomePage() {
+  const [showModal, setModal] = useState(false)
   const [amount, setAmount] = useState('2000')
   const [installments, setInstallments] = useState('12')
   const [mdr, setMdr] = useState('5')
@@ -37,6 +39,14 @@ function HomePage() {
 
   return (
     <Page>
+      <Modal
+        visible={showModal}
+        title="Você está sem conexão"
+        onClose={() => {
+          setModal(false)
+        }}
+        content="Para consultar os valores, é necessário conexão. Por favor, tente mais tarde."
+      />
       <Card width="608px">
         <CardMainContent width="377px">
           <Heading1>Simule sua antecipação</Heading1>
@@ -61,7 +71,7 @@ function HomePage() {
             label="Informe o percentual de MDR"
             value={mdr}
           />
-          <button onClick={callAPI}>consultar</button>
+          <button onClick={() => setModal(true)}>consultar</button>
         </CardMainContent>
         <CardHighlight width="231px">
           <Heading2>Você receberá:</Heading2>
