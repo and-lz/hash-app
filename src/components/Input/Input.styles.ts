@@ -21,9 +21,11 @@ export const InputField = styled.input`
   font-size: 14px;
   line-height: 18px;
   transition: all 200ms ease;
+  display: block;
+  width: 100%;
   &:focus {
     outline: 0;
-    border-color: #66AFE9;
+    border-color: #66afe9;
   }
 `
 
@@ -33,5 +35,5 @@ export const Addon = styled.div`
   font-weight: bold;
   font-size: 11px;
   line-height: 14px;
-  color: #CECECE;
+  color: #cecece;
 `
