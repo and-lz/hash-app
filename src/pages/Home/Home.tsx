@@ -28,19 +28,19 @@ function HomePage() {
     90: 0,
   })
 
-  const callAPI = async function () {
+  const callApiAntecipationService = async function () {
     if (!navigator.onLine) {
       setShowNoConnectionModal(true)
       return
     }
 
-    const response = await APIAntecipation({
+    const responseAPIAntecipation = await APIAntecipation({
       amount,
       installments,
       mdr,
       days: [30, 60, 90],
     })
-    setData(response.data)
+    setData(responseAPIAntecipation.data)
   }
 
   return (
@@ -78,7 +78,7 @@ function HomePage() {
             value={mdr}
           />
           <Spacer />
-          <Button label="Consultar" onClick={callAPI} />
+          <Button label="Consultar" onClick={callApiAntecipationService} />
         </CardMainContent>
         <CardHighlight width="231px">
           <Heading2>Você receberá:</Heading2>
