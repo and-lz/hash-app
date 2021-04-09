@@ -12,6 +12,8 @@ describe('APIAntecipation', () => {
     days: [30, 60, 90],
   }
 
+  const config = { timeout: 5000 }
+
   const paramsWithWrongTypes = {
     amount: '2000',
     installments: '12',
@@ -23,13 +25,13 @@ describe('APIAntecipation', () => {
     await APIAntecipation(params)
   })
   it('Should call api with correct url and parameters passed', async () => {
-    expect(axios.post).toBeCalledWith(URL, params)
+    expect(axios.post).toBeCalledWith(URL, params, config)
   })
   it('Should not call api with get method', async () => {
     expect(axios.get).toBeCalledTimes(0)
   })
   it('Should convert params to the expected format', async () => {
     await APIAntecipation(paramsWithWrongTypes)
-    expect(axios.post).toHaveBeenLastCalledWith(URL, params)
+    expect(axios.post).toHaveBeenLastCalledWith(URL, params, config)
   })
 })

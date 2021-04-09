@@ -15,12 +15,16 @@ async function APIAntecipation({
   mdr,
   days,
 }: APIAntecipationProps): Promise<AxiosResponse<any>> {
-  return await axios.post(URL, {
-    amount: Number(amount),
-    installments: Number(installments),
-    mdr: Number(mdr),
-    days,
-  })
+  return await axios.post(
+    URL,
+    {
+      amount: Number(amount),
+      installments: Number(installments),
+      mdr: Number(mdr),
+      days,
+    },
+    { timeout: 5000 },
+  )
 }
 
 export default APIAntecipation
