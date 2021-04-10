@@ -10,12 +10,21 @@ function Loader({ size }: LoaderProps) {
 
   useEffect(() => {
     setProgress(size)
+
     if (size === 100) {
       setTimeout(() => {
         setProgress(0)
       }, 1000)
     }
   }, [size])
+
+  useEffect(() => {
+    if (progress === 0) {
+      document.body.style.cursor = 'auto'
+    } else {
+      document.body.style.cursor = 'wait'
+    }
+  }, [progress])
 
   return <LoadBar size={progress} />
 }

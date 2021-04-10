@@ -9,7 +9,7 @@ export const LoadBar = styled.div<LoadBarProps>`
   position: fixed;
   z-index: 9999;
   width: ${props => props.size}%;
-  height: 3px;
+  height: 10px;
   background: linear-gradient(to right, #5d9cec, #3d75bb);
   ${props => {
     if (props.size !== 0) {
