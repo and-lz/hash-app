@@ -5,22 +5,16 @@ import {
   CardHighlight,
   CardMainContent,
 } from '../../components/DesignSystem/Card/Card'
-import { Divider } from '../../components/DesignSystem/Divider/Divider'
 import { Form } from '../../components/DesignSystem/Form/Form'
 import Loader from '../../components/DesignSystem/Loader/Loader'
 import Modal from '../../components/DesignSystem/Modal/Modal'
 import { Spacer } from '../../components/DesignSystem/Spaces/Spaces'
-import {
-  Heading1,
-  Heading2,
-} from '../../components/DesignSystem/Typography/Headings'
-import { HighlightText } from '../../components/DesignSystem/Typography/Paragraph'
-import { Bold } from '../../components/DesignSystem/Typography/Styles'
+import { Heading1 } from '../../components/DesignSystem/Typography/Headings'
 import Input from '../../components/Input/Input'
 import APIAntecipation from '../../infrastructure/api/APIAntecipation/APIAntecipation'
-import { formatToCurrency } from '../../infrastructure/format/currency'
-import { getFriendlyDayName, mapDaysToInitialData } from './Calculator.helpers'
+import { mapDaysToInitialData } from './Calculator.helpers'
 import { Page } from './Calculator.styles'
+import Result from './Result/Result'
 
 interface CalculatorPageProps {
   antecipationDays: number[]
@@ -134,15 +128,7 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
           </Form>
         </CardMainContent>
         <CardHighlight width="231px">
-          <Heading2>Você receberá:</Heading2>
-          <Divider />
-          <Spacer size="normal" />
-          {antecipationDays.map(day => (
-            <HighlightText>
-              {getFriendlyDayName(day)}: <br />
-              <Bold>{formatToCurrency(antecipationValuesData[day])}</Bold>
-            </HighlightText>
-          ))}
+          <Result days={antecipationDays} data={antecipationValuesData} />
         </CardHighlight>
       </Card>
     </Page>
