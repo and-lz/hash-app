@@ -6,14 +6,14 @@ interface APIAntecipationProps {
   amount: number | string
   installments: number | string
   mdr: number | string
-  antecipationDays: number[]
+  days: number[]
 }
 
 async function APIAntecipation({
   amount,
   installments,
   mdr,
-  antecipationDays,
+  days,
 }: APIAntecipationProps): Promise<AxiosResponse<any>> {
   return await axios.post(
     URL,
@@ -21,7 +21,7 @@ async function APIAntecipation({
       amount: Number(amount),
       installments: Number(installments),
       mdr: Number(mdr),
-      days: antecipationDays,
+      days,
     },
     { timeout: 5000 },
   )

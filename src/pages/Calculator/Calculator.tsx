@@ -42,7 +42,7 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
         amount,
         installments,
         mdr,
-        antecipationDays,
+        days: antecipationDays,
       })
       setLoadingProgress(75)
       setAntecipationValuesData(responseAPIAntecipation.data)

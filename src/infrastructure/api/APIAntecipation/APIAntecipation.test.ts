@@ -9,7 +9,7 @@ describe('APIAntecipation', () => {
     amount: 2000,
     installments: 12,
     mdr: 5,
-    antecipationDays: [30, 60, 90],
+    days: [30, 60, 90],
   }
 
   const config = { timeout: 5000 }
@@ -18,7 +18,7 @@ describe('APIAntecipation', () => {
     amount: '2000',
     installments: '12',
     mdr: '5',
-    antecipationDays: [30, 60, 90],
+    days: [30, 60, 90],
   }
 
   beforeEach(async () => {
