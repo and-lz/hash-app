@@ -15,6 +15,7 @@ import {
   Heading2,
 } from '../../components/DesignSystem/Typography/Headings'
 import { HighlightText } from '../../components/DesignSystem/Typography/Paragraph'
+import { Bold } from '../../components/DesignSystem/Typography/Styles'
 import Input from '../../components/Input/Input'
 import APIAntecipation from '../../infrastructure/api/APIAntecipation/APIAntecipation'
 import { formatToCurrency } from '../../infrastructure/format/currency'
@@ -138,15 +139,20 @@ function HomePage() {
         <CardHighlight width="231px">
           <Heading2>Você receberá:</Heading2>
           <Divider />
-          <HighlightText>Amanhã: R$ {formatToCurrency(0)}</HighlightText>
           <HighlightText>
-            Em 15 dias: R$ {formatToCurrency(antecipationData['30'])}
+            Amanhã: <Bold>R$ {formatToCurrency(0)}</Bold>
           </HighlightText>
           <HighlightText>
-            Em 30 dias: R$ {formatToCurrency(antecipationData['60'])}
+            Em 15 dias:{' '}
+            <Bold>R$ {formatToCurrency(antecipationData['30'])}</Bold>
           </HighlightText>
           <HighlightText>
-            Em 90 dias: R$ {formatToCurrency(antecipationData['90'])}
+            Em 30 dias:{' '}
+            <Bold>R$ {formatToCurrency(antecipationData['60'])}</Bold>
+          </HighlightText>
+          <HighlightText>
+            Em 90 dias:{' '}
+            <Bold>R$ {formatToCurrency(antecipationData['90'])}</Bold>
           </HighlightText>
         </CardHighlight>
       </Card>
