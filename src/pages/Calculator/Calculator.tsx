@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Button from '../../components/DesignSystem/Button/Button'
 import {
   Card,
@@ -19,23 +19,26 @@ import { Bold } from '../../components/DesignSystem/Typography/Styles'
 import Input from '../../components/Input/Input'
 import APIAntecipation from '../../infrastructure/api/APIAntecipation/APIAntecipation'
 import { formatToCurrency } from '../../infrastructure/format/currency'
-import { Page } from './Home.styles'
+import { getFriendlyDayName, mapDaysToInitialData } from './Calculator.helpers'
+import { Page } from './Calculator.styles'
 
-function HomePage() {
+interface CalculatorPageProps {
+  antecipationDays: number[]
+}
+
+function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
   const [showNoConnectionModal, setShowNoConnectionModal] = useState(false)
   const [showErrorModal, setShowErrorModal] = useState(false)
   const [loadingProgress, setLoadingProgress] = useState(0)
+  const form = (useRef() as unknown) as HTMLFormElement
 
   const [amount, setAmount] = useState('2000')
   const [installments, setInstallments] = useState('12')
   const [mdr, setMdr] = useState('1')
 
-  const [antecipationData, setAntecipationData] = useState({
-    1: 0,
-    30: 0,
-    60: 0,
-    90: 0,
-  })
+  const [antecipationValuesData, setAntecipationValuesData] = useState(
+    mapDaysToInitialData(antecipationDays),
+  )
 
   async function callApiAntecipationService() {
     setLoadingProgress(0)
@@ -50,32 +53,25 @@ function HomePage() {
         amount,
         installments,
         mdr,
-        days: [1, 30, 60, 90],
+        antecipationDays,
       })
       setLoadingProgress(75)
-      setAntecipationData(responseAPIAntecipation.data)
+      setAntecipationValuesData(responseAPIAntecipation.data)
       setLoadingProgress(100)
     } catch {
       setLoadingProgress(100)
       setShowErrorModal(true)
-      setAntecipationData({
-        1: 0,
-        30: 0,
-        60: 0,
-        90: 0,
-      })
+      setAntecipationValuesData(mapDaysToInitialData(antecipationDays))
     }
   }
 
   function checkFormValidity() {
-    const form = document.getElementById('form') as HTMLFormElement
-    if (form && form.checkValidity()) callApiAntecipationService()
+    if (form.current.checkValidity()) callApiAntecipationService()
   }
 
   return (
     <Page>
       <Loader size={loadingProgress} />
-
       <Modal
         visible={showNoConnectionModal}
         title="Você está sem conexão"
@@ -93,12 +89,11 @@ function HomePage() {
         }}
         content="Aconteceu algum erro de servidor, não sendo possível completar sua solicitação. Por favor, tente mais tarde."
       />
-
       <Card width="608px">
         <CardMainContent width="377px">
           <Heading1>Simule sua antecipação</Heading1>
           <Form
-            id="form"
+            ref={form}
             onSubmit={(e: React.FormEvent<HTMLInputElement>) => {
               e.preventDefault()
               checkFormValidity()
@@ -142,29 +137,16 @@ function HomePage() {
           <Heading2>Você receberá:</Heading2>
           <Divider />
           <Spacer size="normal" />
-          <HighlightText>
-            Amanhã: <br />
-            <Bold>{formatToCurrency(antecipationData['1'])}</Bold>
-          </HighlightText>
-          <Spacer size="normal" />
-          <HighlightText>
-            Em 15 dias: <br />
-            <Bold>{formatToCurrency(antecipationData['30'])}</Bold>
-          </HighlightText>
-          <Spacer size="normal" />
-          <HighlightText>
-            Em 30 dias: <br />
-            <Bold>{formatToCurrency(antecipationData['60'])}</Bold>
-          </HighlightText>
-          <Spacer size="normal" />
-          <HighlightText>
-            Em 90 dias: <br />
-            <Bold>{formatToCurrency(antecipationData['90'])}</Bold>
-          </HighlightText>
+          {antecipationDays.map(day => (
+            <HighlightText>
+              {getFriendlyDayName(day)}: <br />
+              <Bold>{formatToCurrency(antecipationValuesData[day])}</Bold>
+            </HighlightText>
+          ))}
         </CardHighlight>
       </Card>
     </Page>
   )
 }
 
-export default HomePage
+export default CalculatorPage
