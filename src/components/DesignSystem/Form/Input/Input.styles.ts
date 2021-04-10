@@ -21,4 +21,12 @@ export const InputField = styled.input`
   &:invalid {
     border-color: red;
   }
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &[type=number] {
+    -moz-appearance: textfield;
+  }
 `
