@@ -31,6 +31,7 @@ function HomePage() {
   const [mdr, setMdr] = useState('1')
 
   const [antecipationData, setAntecipationData] = useState({
+    1: 0,
     30: 0,
     60: 0,
     90: 0,
@@ -49,7 +50,7 @@ function HomePage() {
         amount,
         installments,
         mdr,
-        days: [30, 60, 90],
+        days: [1, 30, 60, 90],
       })
       setLoadingProgress(75)
       setAntecipationData(responseAPIAntecipation.data)
@@ -58,6 +59,7 @@ function HomePage() {
       setLoadingProgress(100)
       setShowErrorModal(true)
       setAntecipationData({
+        1: 0,
         30: 0,
         60: 0,
         90: 0,
@@ -139,20 +141,25 @@ function HomePage() {
         <CardHighlight width="231px">
           <Heading2>Você receberá:</Heading2>
           <Divider />
+          <Spacer size="normal" />
           <HighlightText>
-            Amanhã: <Bold>R$ {formatToCurrency(0)}</Bold>
+            Amanhã: <br />
+            <Bold>{formatToCurrency(antecipationData['1'])}</Bold>
           </HighlightText>
+          <Spacer size="normal" />
           <HighlightText>
-            Em 15 dias:{' '}
-            <Bold>R$ {formatToCurrency(antecipationData['30'])}</Bold>
+            Em 15 dias: <br />
+            <Bold>{formatToCurrency(antecipationData['30'])}</Bold>
           </HighlightText>
+          <Spacer size="normal" />
           <HighlightText>
-            Em 30 dias:{' '}
-            <Bold>R$ {formatToCurrency(antecipationData['60'])}</Bold>
+            Em 30 dias: <br />
+            <Bold>{formatToCurrency(antecipationData['60'])}</Bold>
           </HighlightText>
+          <Spacer size="normal" />
           <HighlightText>
-            Em 90 dias:{' '}
-            <Bold>R$ {formatToCurrency(antecipationData['90'])}</Bold>
+            Em 90 dias: <br />
+            <Bold>{formatToCurrency(antecipationData['90'])}</Bold>
           </HighlightText>
         </CardHighlight>
       </Card>
