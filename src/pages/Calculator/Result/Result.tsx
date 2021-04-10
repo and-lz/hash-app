@@ -12,7 +12,7 @@ interface ResultProps {
   data: any
 }
 
-function Result({ days, data }: ResultProps) {
+function CalculatorResult({ days, data }: ResultProps) {
   return (
     <>
       <Heading2>Você receberá:</Heading2>
@@ -28,4 +28,4 @@ function Result({ days, data }: ResultProps) {
   )
 }
 
-export default Result
+export default CalculatorResult

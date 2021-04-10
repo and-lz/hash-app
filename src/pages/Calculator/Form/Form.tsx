@@ -34,7 +34,9 @@ function CalculatorForm({ onSubmit }: CalculadoraFormProps) {
           onChange={(value: string) => setAmount(value)}
           required
           label="Informe o valor da renda"
+          min={1000}
           value={amount}
+          type="number"
         />
         <Spacer />
         <Input

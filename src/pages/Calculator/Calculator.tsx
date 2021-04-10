@@ -11,7 +11,7 @@ import APIAntecipation from '../../infrastructure/api/APIAntecipation/APIAntecip
 import { mapDaysToInitialData } from './Calculator.helpers'
 import { Page } from './Calculator.styles'
 import CalculatorForm from './Form/Form'
-import Result from './Result/Result'
+import CalculatorResult from './Result/Result'
 
 interface CalculatorPageProps {
   antecipationDays: number[]
@@ -26,7 +26,7 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
     mapDaysToInitialData(antecipationDays),
   )
 
-  async function callApiAntecipationService(
+  async function callAntecipationService(
     amount: string,
     installments: string,
     mdr: string,
@@ -36,7 +36,6 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
       setShowNoConnectionModal(true)
       return
     }
-
     setLoadingProgress(50)
     try {
       const responseAPIAntecipation = await APIAntecipation({
@@ -77,10 +76,13 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
       <Card width="608px">
         <CardMainContent width="377px">
           <Heading1>Simule sua antecipação</Heading1>
-          <CalculatorForm onSubmit={callApiAntecipationService} />
+          <CalculatorForm onSubmit={callAntecipationService} />
         </CardMainContent>
         <CardHighlight width="231px">
-          <Result days={antecipationDays} data={antecipationValuesData} />
+          <CalculatorResult
+            days={antecipationDays}
+            data={antecipationValuesData}
+          />
         </CardHighlight>
       </Card>
     </Page>
