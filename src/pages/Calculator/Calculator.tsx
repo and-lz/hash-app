@@ -1,19 +1,16 @@
-import React, { useRef, useState } from 'react'
-import Button from '../../components/DesignSystem/Button/Button'
+import React, { useState } from 'react'
 import {
   Card,
   CardHighlight,
   CardMainContent,
 } from '../../components/DesignSystem/Card/Card'
-import { Form } from '../../components/DesignSystem/Form/Form'
 import Loader from '../../components/DesignSystem/Loader/Loader'
 import Modal from '../../components/DesignSystem/Modal/Modal'
-import { Spacer } from '../../components/DesignSystem/Spaces/Spaces'
 import { Heading1 } from '../../components/DesignSystem/Typography/Headings'
-import Input from '../../components/Input/Input'
 import APIAntecipation from '../../infrastructure/api/APIAntecipation/APIAntecipation'
 import { mapDaysToInitialData } from './Calculator.helpers'
 import { Page } from './Calculator.styles'
+import CalculatorForm from './Form/Form'
 import Result from './Result/Result'
 
 interface CalculatorPageProps {
@@ -24,17 +21,16 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
   const [showNoConnectionModal, setShowNoConnectionModal] = useState(false)
   const [showErrorModal, setShowErrorModal] = useState(false)
   const [loadingProgress, setLoadingProgress] = useState(0)
-  const form = (useRef() as unknown) as HTMLFormElement
-
-  const [amount, setAmount] = useState('2000')
-  const [installments, setInstallments] = useState('12')
-  const [mdr, setMdr] = useState('1')
 
   const [antecipationValuesData, setAntecipationValuesData] = useState(
     mapDaysToInitialData(antecipationDays),
   )
 
-  async function callApiAntecipationService() {
+  async function callApiAntecipationService(
+    amount: string,
+    installments: string,
+    mdr: string,
+  ) {
     setLoadingProgress(0)
     if (!navigator.onLine) {
       setShowNoConnectionModal(true)
@@ -59,10 +55,6 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
     }
   }
 
-  function checkFormValidity() {
-    if (form.current.checkValidity()) callApiAntecipationService()
-  }
-
   return (
     <Page>
       <Loader size={loadingProgress} />
@@ -74,7 +66,6 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
         }}
         content="Para consultar os valores, é necessário conexão. Por favor, tente mais tarde."
       />
-
       <Modal
         visible={showErrorModal}
         title="Não foi possível completar sua solicitação"
@@ -86,46 +77,7 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
       <Card width="608px">
         <CardMainContent width="377px">
           <Heading1>Simule sua antecipação</Heading1>
-          <Form
-            ref={form}
-            onSubmit={(e: React.FormEvent<HTMLInputElement>) => {
-              e.preventDefault()
-              checkFormValidity()
-            }}
-          >
-            <Input
-              onChange={(value: string) => setAmount(value)}
-              required
-              label="Informe o valor da renda"
-              value={amount}
-            />
-            <Spacer />
-            <Input
-              onChange={(value: string) => setInstallments(value)}
-              required
-              label="Em quantas parcelas"
-              value={installments}
-              addon="Máximo de 12 parcelas"
-              type="number"
-              min={1}
-              max={12}
-            />
-            <Spacer />
-            <Input
-              onChange={(value: string) => setMdr(value)}
-              required
-              label="Informe o percentual de MDR"
-              value={mdr}
-              type="number"
-              min={0}
-            />
-            <Spacer />
-            <Button
-              onClick={checkFormValidity}
-              type="submit"
-              label="Consultar"
-            />
-          </Form>
+          <CalculatorForm onSubmit={callApiAntecipationService} />
         </CardMainContent>
         <CardHighlight width="231px">
           <Result days={antecipationDays} data={antecipationValuesData} />
