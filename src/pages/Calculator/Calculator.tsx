@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Card, CardHighlight, CardMainContent } from 'design-system/Card/Card'
-import Loader from 'design-system/Loader/Loader'
+import Loader from 'components/Loader/Loader'
 import Modal from 'components/Modal/Modal'
 import { Heading1 } from 'design-system/Typography/Headings'
 import APIAntecipation from 'infrastructure/api/APIAntecipation/APIAntecipation'

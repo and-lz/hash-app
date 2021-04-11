@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { LoadBar } from './Loader.styles'
+import { LoadBar } from 'design-system/Loader/Loader.styles'
 
 interface LoaderProps {
   size: number
