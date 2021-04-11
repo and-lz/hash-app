@@ -1,15 +1,15 @@
-import { Divider } from "components/DesignSystem/Divider/Divider";
-import { Spacer } from "components/DesignSystem/Spaces/Spaces";
-import { Heading2 } from "components/DesignSystem/Typography/Headings";
-import { HighlightText } from "components/DesignSystem/Typography/Paragraph";
-import { Bold } from "components/DesignSystem/Typography/Styles";
-import { formatToCurrency } from "infrastructure/format/currency";
-import React from "react";
-import { getFriendlyDayName } from "../Calculator.helpers";
+import { Divider } from 'components/DesignSystem/Divider/Divider'
+import { Spacer } from 'components/DesignSystem/Spaces/Spaces'
+import { Heading2 } from 'components/DesignSystem/Typography/Headings'
+import { HighlightText } from 'components/DesignSystem/Typography/Paragraph'
+import { Bold } from 'components/DesignSystem/Typography/Styles'
+import { formatToCurrency } from 'infrastructure/format/currency'
+import React from 'react'
+import { getFriendlyDayName } from '../Calculator.helpers'
 
 interface ResultProps {
-  days: number[];
-  data: any;
+  days: number[]
+  data: any
 }
 
 function CalculatorResult({ days, data }: ResultProps) {
@@ -25,7 +25,7 @@ function CalculatorResult({ days, data }: ResultProps) {
         </HighlightText>
       ))}
     </>
-  );
+  )
 }
 
-export default CalculatorResult;
+export default CalculatorResult

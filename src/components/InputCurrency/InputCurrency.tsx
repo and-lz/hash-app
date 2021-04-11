@@ -1,20 +1,20 @@
-import { InputField } from "components/DesignSystem/Form/Input/Input.styles";
+import { InputField } from 'components/DesignSystem/Form/Input/Input.styles'
 import {
   FormLabel,
   FormLabelAddOn,
-} from "components/DesignSystem/Form/Label/Label.styles";
-import { formatToCurrency } from "infrastructure/format/currency";
-import React, { useRef, useState } from "react";
+} from 'components/DesignSystem/Form/Label/Label.styles'
+import { formatToCurrency } from 'infrastructure/format/currency'
+import React, { useRef, useState } from 'react'
 
 interface InputCurrencyProps {
-  required?: boolean;
-  label: string;
-  addon?: string;
-  value?: number;
-  onChange: Function;
-  placeholder?: "string";
-  min?: number;
-  max?: number;
+  required?: boolean
+  label: string
+  addon?: string
+  value?: number
+  onChange: Function
+  placeholder?: 'string'
+  min?: number
+  max?: number
 }
 
 function InputCurrency({
@@ -26,31 +26,31 @@ function InputCurrency({
   min,
   max,
 }: InputCurrencyProps) {
-  const input = useRef<HTMLInputElement>();
-  const [formattedValue, setFormmatedValue] = useState(formatToCurrency(value));
+  const input = useRef<HTMLInputElement>()
+  const [formattedValue, setFormmatedValue] = useState(formatToCurrency(value))
 
   function onChangeInternal() {
-    let onlyNumbers = getOnlyNumber(input);
-    if (!onlyNumbers) return;
-    console.log(onlyNumbers);
-    setFormmatedValue(formatToCurrency(onlyNumbers));
-    onChange(onlyNumbers);
+    let onlyNumbers = getOnlyNumber(input)
+    if (!onlyNumbers) return
+    console.log(onlyNumbers)
+    setFormmatedValue(formatToCurrency(onlyNumbers))
+    onChange(onlyNumbers)
   }
 
   function onBlurInternal() {
-    let onlyNumbers = getOnlyNumber(input);
-    if (!onlyNumbers) return;
+    let onlyNumbers = getOnlyNumber(input)
+    if (!onlyNumbers) return
 
-    if (min && onlyNumbers < min) onlyNumbers = min;
-    if (max && onlyNumbers > max) onlyNumbers = max;
-    setFormmatedValue(formatToCurrency(onlyNumbers));
-    onChange(onlyNumbers);
+    if (min && onlyNumbers < min) onlyNumbers = min
+    if (max && onlyNumbers > max) onlyNumbers = max
+    setFormmatedValue(formatToCurrency(onlyNumbers))
+    onChange(onlyNumbers)
   }
 
   return (
     <>
       <FormLabel htmlFor={`${label} field`}>
-        {label} {required && "*"}
+        {label} {required && '*'}
       </FormLabel>
       <InputField
         // @ts-ignore
@@ -64,13 +64,13 @@ function InputCurrency({
       />
       {addon && <FormLabelAddOn>{addon}</FormLabelAddOn>}
     </>
-  );
+  )
 }
 
 function getOnlyNumber(ref: { current: any }) {
-  if (!ref.current) return;
-  let onlyNumbers = ref.current.value.replace(/\D+/g, "") / 100;
-  return onlyNumbers;
+  if (!ref.current) return
+  let onlyNumbers = ref.current.value.replace(/\D+/g, '') / 100
+  return onlyNumbers
 }
 
-export default InputCurrency;
+export default InputCurrency

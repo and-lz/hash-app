@@ -1,56 +1,56 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import {
   Card,
   CardHighlight,
   CardMainContent,
-} from "components/DesignSystem/Card/Card";
-import Loader from "components/DesignSystem/Loader/Loader";
-import Modal from "components/DesignSystem/Modal/Modal";
-import { Heading1 } from "components/DesignSystem/Typography/Headings";
-import APIAntecipation from "infrastructure/api/APIAntecipation/APIAntecipation";
-import { mapDaysToInitialData } from "./Calculator.helpers";
-import { Page } from "./Calculator.styles";
-import CalculatorForm from "./CalculatorForm/CalculatorForm";
-import CalculatorResult from "./CalculatorResult/CalculatorResult";
+} from 'components/DesignSystem/Card/Card'
+import Loader from 'components/DesignSystem/Loader/Loader'
+import Modal from 'components/DesignSystem/Modal/Modal'
+import { Heading1 } from 'components/DesignSystem/Typography/Headings'
+import APIAntecipation from 'infrastructure/api/APIAntecipation/APIAntecipation'
+import { mapDaysToInitialData } from './Calculator.helpers'
+import { Page } from './Calculator.styles'
+import CalculatorForm from './CalculatorForm/CalculatorForm'
+import CalculatorResult from './CalculatorResult/CalculatorResult'
 
 interface CalculatorPageProps {
-  antecipationDays: number[];
+  antecipationDays: number[]
 }
 
 function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
-  const [showNoConnectionModal, setShowNoConnectionModal] = useState(false);
-  const [showErrorModal, setShowErrorModal] = useState(false);
-  const [loadingProgress, setLoadingProgress] = useState(0);
+  const [showNoConnectionModal, setShowNoConnectionModal] = useState(false)
+  const [showErrorModal, setShowErrorModal] = useState(false)
+  const [loadingProgress, setLoadingProgress] = useState(0)
 
   const [antecipationValuesData, setAntecipationValuesData] = useState(
-    mapDaysToInitialData(antecipationDays)
-  );
+    mapDaysToInitialData(antecipationDays),
+  )
 
   async function callAntecipationService(
     amount: string,
     installments: string,
-    mdr: string
+    mdr: string,
   ) {
-    setLoadingProgress(0);
+    setLoadingProgress(0)
     if (!navigator.onLine) {
-      setShowNoConnectionModal(true);
-      return;
+      setShowNoConnectionModal(true)
+      return
     }
-    setLoadingProgress(50);
+    setLoadingProgress(50)
     try {
       const responseAPIAntecipation = await APIAntecipation({
         amount,
         installments,
         mdr,
         days: antecipationDays,
-      });
-      setLoadingProgress(75);
-      setAntecipationValuesData(responseAPIAntecipation.data);
-      setLoadingProgress(100);
+      })
+      setLoadingProgress(75)
+      setAntecipationValuesData(responseAPIAntecipation.data)
+      setLoadingProgress(100)
     } catch {
-      setLoadingProgress(100);
-      setShowErrorModal(true);
-      setAntecipationValuesData(mapDaysToInitialData(antecipationDays));
+      setLoadingProgress(100)
+      setShowErrorModal(true)
+      setAntecipationValuesData(mapDaysToInitialData(antecipationDays))
     }
   }
 
@@ -61,7 +61,7 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
         visible={showNoConnectionModal}
         title="Você está sem conexão"
         onClose={() => {
-          setShowNoConnectionModal(false);
+          setShowNoConnectionModal(false)
         }}
         content="Para consultar os valores, é necessário conexão. Por favor, tente mais tarde."
       />
@@ -69,7 +69,7 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
         visible={showErrorModal}
         title="Não foi possível completar sua solicitação"
         onClose={() => {
-          setShowErrorModal(false);
+          setShowErrorModal(false)
         }}
         content="Aconteceu algum erro de servidor, não sendo possível completar sua solicitação. Por favor, tente mais tarde."
       />
@@ -86,7 +86,7 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
         </CardHighlight>
       </Card>
     </Page>
-  );
+  )
 }
 
-export default CalculatorPage;
+export default CalculatorPage
