@@ -1,12 +1,8 @@
 import React, { useState } from 'react'
-import {
-  Card,
-  CardHighlight,
-  CardMainContent,
-} from 'components/DesignSystem/Card/Card'
-import Loader from 'components/DesignSystem/Loader/Loader'
-import Modal from 'components/DesignSystem/Modal/Modal'
-import { Heading1 } from 'components/DesignSystem/Typography/Headings'
+import { Card, CardHighlight, CardMainContent } from 'design-system/Card/Card'
+import Loader from 'design-system/Loader/Loader'
+import Modal from 'components/Modal/Modal'
+import { Heading1 } from 'design-system/Typography/Headings'
 import APIAntecipation from 'infrastructure/api/APIAntecipation/APIAntecipation'
 import { mapDaysToInitialData } from './Calculator.helpers'
 import { Page } from './Calculator.styles'

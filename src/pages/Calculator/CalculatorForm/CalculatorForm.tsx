@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
-import Button from 'components/DesignSystem/Button/Button'
-import { Form } from 'components/DesignSystem/Form/Form'
-import { Spacer } from 'components/DesignSystem/Spaces/Spaces'
+import Button from 'design-system/Button/Button'
+import { Form } from 'design-system/Form/Form'
+import { Spacer } from 'design-system/Spaces/Spaces'
 import Input from 'components/Input/Input'
 import InputCurrency from 'components/InputCurrency/InputCurrency'
 

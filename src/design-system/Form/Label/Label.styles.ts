@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import DesignSystem from 'components/DesignSystem'
+import DesignSystem from 'design-system'
 
 export const FormLabel = styled.label`
   display: block;

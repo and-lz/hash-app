@@ -1,9 +1,9 @@
-import Button from 'components/DesignSystem/Button/Button'
-import { Spacer } from 'components/DesignSystem/Spaces/Spaces'
-import { Heading1 } from 'components/DesignSystem/Typography/Headings'
-import { Text } from 'components/DesignSystem/Typography/Paragraph'
+import Button from 'design-system/Button/Button'
+import { Spacer } from 'design-system/Spaces/Spaces'
+import { Heading1 } from 'design-system/Typography/Headings'
+import { Text } from 'design-system/Typography/Paragraph'
 import React, { useEffect, useState } from 'react'
-import { Modal as ModalBox, ModalBackground } from './Modal.styles'
+import { Modal as ModalBox, ModalBackground } from 'design-system/Modal/Modal'
 
 interface ModalProps {
   title: string
