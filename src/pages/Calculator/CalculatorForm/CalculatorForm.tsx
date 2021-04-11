@@ -3,6 +3,7 @@ import Button from '../../../components/DesignSystem/Button/Button'
 import { Form } from '../../../components/DesignSystem/Form/Form'
 import { Spacer } from '../../../components/DesignSystem/Spaces/Spaces'
 import Input from '../../../components/Input/Input'
+import InputCurrency from '../../../components/InputCurrency/InputCurrency'
 
 interface CalculadoraFormProps {
   onSubmit: Function
@@ -11,7 +12,7 @@ interface CalculadoraFormProps {
 function CalculatorForm({ onSubmit }: CalculadoraFormProps) {
   const form = (useRef() as unknown) as HTMLFormElement
 
-  const [amount, setAmount] = useState('2000')
+  const [amount, setAmount] = useState(2000)
   const [installments, setInstallments] = useState('12')
   const [mdr, setMdr] = useState('1')
 
@@ -29,13 +30,12 @@ function CalculatorForm({ onSubmit }: CalculadoraFormProps) {
         checkFormValidity()
       }}
     >
-      <Input
-        onChange={(value: string) => setAmount(value)}
+      <InputCurrency
+        onChange={(value: number) => setAmount(value)}
         required
         label="Informe o valor da renda"
         min={1000}
         value={amount}
-        type="number"
       />
       <Spacer />
       <Input
