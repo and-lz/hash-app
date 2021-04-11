@@ -12,9 +12,9 @@ interface CalculadoraFormProps {
 function CalculatorForm({ onSubmit }: CalculadoraFormProps) {
   const form = (useRef() as unknown) as HTMLFormElement
 
-  const [amount, setAmount] = useState(2000)
-  const [installments, setInstallments] = useState('12')
-  const [mdr, setMdr] = useState('1')
+  const [amount, setAmount] = useState(1000)
+  const [installments, setInstallments] = useState(12)
+  const [mdr, setMdr] = useState(1)
 
   function checkFormValidity() {
     if (form.current.checkValidity()) {
@@ -40,7 +40,7 @@ function CalculatorForm({ onSubmit }: CalculadoraFormProps) {
       />
       <Spacer />
       <Input
-        onChange={(value: string) => setInstallments(value)}
+        onChange={(value: number) => setInstallments(value)}
         required
         label="Em quantas parcelas"
         value={installments}
@@ -51,7 +51,7 @@ function CalculatorForm({ onSubmit }: CalculadoraFormProps) {
       />
       <Spacer />
       <Input
-        onChange={(value: string) => setMdr(value)}
+        onChange={(value: number) => setMdr(value)}
         required
         label="Informe o percentual de MDR"
         value={mdr}

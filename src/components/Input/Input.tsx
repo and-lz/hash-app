@@ -10,7 +10,7 @@ interface InputProps {
   required?: boolean
   label: string
   addon?: string
-  value?: string
+  value?: string | number
   onChange: Function
   min?: number
   max?: number
