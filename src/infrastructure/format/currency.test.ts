@@ -7,6 +7,12 @@ describe('formatToCurrency', () => {
     const currencyExpected = removeWhitespaceInString('R$ 2.000,00')
     expect(numberFormmated).toBe(currencyExpected)
   })
+  test('should format number correctly', () => {
+    const number = 10000
+    const numberFormmated = removeWhitespaceInString(formatToCurrency(number))
+    const currencyExpected = removeWhitespaceInString('R$ 10.000,00')
+    expect(numberFormmated).toBe(currencyExpected)
+  })
 })
 
 const removeWhitespaceInString = (value: string): string =>
