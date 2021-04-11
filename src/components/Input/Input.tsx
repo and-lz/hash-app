@@ -1,24 +1,24 @@
-import React from 'react'
-import { InputField } from '../DesignSystem/Form/Input/Input.styles'
+import { InputField } from "components/DesignSystem/Form/Input/Input.styles";
 import {
-  FormLabelAddOn,
   FormLabel,
-} from '../DesignSystem/Form/Label/Label.styles'
+  FormLabelAddOn,
+} from "components/DesignSystem/Form/Label/Label.styles";
+import React from "react";
 
 interface InputProps {
-  type?: 'text' | 'number'
-  required?: boolean
-  label: string
-  addon?: string
-  value?: string | number
-  onChange: Function
-  min?: number
-  max?: number
-  placeholder?: 'string'
+  type?: "text" | "number";
+  required?: boolean;
+  label: string;
+  addon?: string;
+  value?: string | number;
+  onChange: Function;
+  min?: number;
+  max?: number;
+  placeholder?: "string";
 }
 
 function Input({
-  type = 'text',
+  type = "text",
   label,
   required,
   addon,
@@ -30,7 +30,7 @@ function Input({
   return (
     <>
       <FormLabel htmlFor={`${label} field`}>
-        {label} {required && '*'}
+        {label} {required && "*"}
       </FormLabel>
       <InputField
         data-testid="input-field"
@@ -39,12 +39,12 @@ function Input({
         max={max}
         required={required}
         value={value}
-        onChange={e => onChange(e.currentTarget.value)}
+        onChange={(e) => onChange(e.currentTarget.value)}
         type={type}
       />
       {addon && <FormLabelAddOn>{addon}</FormLabelAddOn>}
     </>
-  )
+  );
 }
 
-export default Input
+export default Input;

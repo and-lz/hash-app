@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import DesignSystem from '../..'
+import styled from "styled-components";
+import DesignSystem from "components/DesignSystem";
 
 export const FormLabel = styled.label`
   display: block;
@@ -9,7 +9,7 @@ export const FormLabel = styled.label`
   font-size: 14px;
   line-height: 18px;
   margin-bottom: 6px;
-`
+`;
 
 export const FormLabelAddOn = styled.div`
   font-family: Source Sans Pro;
@@ -18,4 +18,4 @@ export const FormLabelAddOn = styled.div`
   font-size: 11px;
   line-height: 14px;
   color: ${DesignSystem.colors.alto};
-`
+`;

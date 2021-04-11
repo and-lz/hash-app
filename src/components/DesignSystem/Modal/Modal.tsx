@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import Button from '../Button/Button'
-import { Spacer } from '../Spaces/Spaces'
-import { Heading1 } from '../Typography/Headings'
-import { Text } from '../Typography/Paragraph'
-import { ModalBackground, Modal as ModalBox } from './Modal.styles'
+import Button from "components/DesignSystem/Button/Button";
+import { Spacer } from "components/DesignSystem/Spaces/Spaces";
+import { Heading1 } from "components/DesignSystem/Typography/Headings";
+import { Text } from "components/DesignSystem/Typography/Paragraph";
+import React, { useEffect, useState } from "react";
+import { Modal as ModalBox, ModalBackground } from "./Modal.styles";
 
 interface ModalProps {
-  title: string
-  content?: string
-  visible: boolean
-  onClose: Function
-  action?: string
+  title: string;
+  content?: string;
+  visible: boolean;
+  onClose: Function;
+  action?: string;
 }
 
 function Modal({
@@ -18,15 +18,15 @@ function Modal({
   content,
   visible,
   onClose,
-  action = 'Fechar',
+  action = "Fechar",
 }: ModalProps) {
-  const [showModal, setShowModal] = useState(visible)
+  const [showModal, setShowModal] = useState(visible);
 
   useEffect(() => {
-    setShowModal(visible)
-  }, [visible])
+    setShowModal(visible);
+  }, [visible]);
 
-  if (!showModal) return <></>
+  if (!showModal) return <></>;
   return (
     <>
       <ModalBackground visible={showModal}>
@@ -37,14 +37,14 @@ function Modal({
           <Button
             label={action}
             onClick={() => {
-              setShowModal(false)
-              onClose()
+              setShowModal(false);
+              onClose();
             }}
           />
         </ModalBox>
       </ModalBackground>
     </>
-  )
+  );
 }
 
-export default Modal
+export default Modal;

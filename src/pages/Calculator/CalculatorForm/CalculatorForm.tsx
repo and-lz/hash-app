@@ -1,24 +1,24 @@
-import React, { useRef, useState } from 'react'
-import Button from '../../../components/DesignSystem/Button/Button'
-import { Form } from '../../../components/DesignSystem/Form/Form'
-import { Spacer } from '../../../components/DesignSystem/Spaces/Spaces'
-import Input from '../../../components/Input/Input'
-import InputCurrency from '../../../components/InputCurrency/InputCurrency'
+import React, { useRef, useState } from "react";
+import Button from "components/DesignSystem/Button/Button";
+import { Form } from "components/DesignSystem/Form/Form";
+import { Spacer } from "components/DesignSystem/Spaces/Spaces";
+import Input from "components/Input/Input";
+import InputCurrency from "components/InputCurrency/InputCurrency";
 
 interface CalculadoraFormProps {
-  onSubmit: Function
+  onSubmit: Function;
 }
 
 function CalculatorForm({ onSubmit }: CalculadoraFormProps) {
-  const form = (useRef() as unknown) as HTMLFormElement
+  const form = (useRef() as unknown) as HTMLFormElement;
 
-  const [amount, setAmount] = useState(1000)
-  const [installments, setInstallments] = useState(12)
-  const [mdr, setMdr] = useState(1)
+  const [amount, setAmount] = useState(1000);
+  const [installments, setInstallments] = useState(12);
+  const [mdr, setMdr] = useState(1);
 
   function checkFormValidity() {
     if (form.current.checkValidity()) {
-      onSubmit(amount, installments, mdr)
+      onSubmit(amount, installments, mdr);
     }
   }
 
@@ -26,8 +26,8 @@ function CalculatorForm({ onSubmit }: CalculadoraFormProps) {
     <Form
       ref={form}
       onSubmit={(e: React.FormEvent<HTMLInputElement>) => {
-        e.preventDefault()
-        checkFormValidity()
+        e.preventDefault();
+        checkFormValidity();
       }}
     >
       <InputCurrency
@@ -61,7 +61,7 @@ function CalculatorForm({ onSubmit }: CalculadoraFormProps) {
       <Spacer />
       <Button onClick={checkFormValidity} type="submit" label="Consultar" />
     </Form>
-  )
+  );
 }
 
-export default CalculatorForm
+export default CalculatorForm;

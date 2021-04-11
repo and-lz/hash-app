@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import DesignSystem from '../..'
+import styled from "styled-components";
+import DesignSystem from "components/DesignSystem";
 
 export const InputField = styled.input`
   padding: 10px;
@@ -29,4 +29,4 @@ export const InputField = styled.input`
   &[type=number] {
     -moz-appearance: textfield;
   }
-`
+`;
