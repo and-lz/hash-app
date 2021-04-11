@@ -10,8 +10,8 @@ import { Heading1 } from '../../components/DesignSystem/Typography/Headings'
 import APIAntecipation from '../../infrastructure/api/APIAntecipation/APIAntecipation'
 import { mapDaysToInitialData } from './Calculator.helpers'
 import { Page } from './Calculator.styles'
-import CalculatorForm from './Form/Form'
-import CalculatorResult from './Result/Result'
+import CalculatorForm from './CalculatorForm/CalculatorForm'
+import CalculatorResult from './CalculatorResult/CalculatorResult'
 
 interface CalculatorPageProps {
   antecipationDays: number[]

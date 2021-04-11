@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, RenderResult, screen } from '@testing-library/react'
-import CalculatorResult from './Result'
+import CalculatorResult from './CalculatorResult'
 
 describe('<CalculatorResult />', () => {
   let component: RenderResult
