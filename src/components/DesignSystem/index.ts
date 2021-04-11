@@ -1,10 +1,12 @@
 import { colors } from './colors'
 import { duration, easing } from './motion'
 
-export default {
+const DS = {
   colors,
   motion: {
     easing,
     duration,
   },
 }
+
+export default DS
