@@ -9,6 +9,9 @@ describe('<InputCurrency />', () => {
       <InputCurrency label="Basic Input" min={1} max={3} onChange={() => {}} />,
     )
   })
+  test('Should match snapshot', () => {
+    expect(component).toMatchSnapshot()
+  })
   test('should render basic input with label', () => {
     const label = screen.getByText(/Basic Input/i)
     expect(label).toBeInTheDocument()

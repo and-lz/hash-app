@@ -19,4 +19,7 @@ describe('<CalculatorResult />', () => {
     expect(values[0]).toHaveTextContent(`R$ 3.000,00`)
     expect(values[1]).toHaveTextContent(`R$ 3.050,00`)
   })
+  test('Should match snapshot', () => {
+    expect(component).toMatchSnapshot()
+  })
 })

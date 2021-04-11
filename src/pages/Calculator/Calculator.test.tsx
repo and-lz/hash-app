@@ -13,4 +13,7 @@ describe('<HomePage>', () => {
     const label = screen.getByText(/Simule sua antecipação/i)
     expect(label).toBeInTheDocument()
   })
+  test('Should match snapshot', () => {
+    expect(component).toMatchSnapshot()
+  })
 })
