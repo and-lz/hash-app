@@ -12,9 +12,9 @@ interface InputCurrencyProps {
   addon?: string
   value?: number
   onChange: Function
+  placeholder?: 'string'
   min?: number
   max?: number
-  placeholder?: 'string'
 }
 
 function InputCurrency({
@@ -22,16 +22,27 @@ function InputCurrency({
   required,
   addon,
   value = 0,
+  onChange,
   min,
   max,
-  onChange,
 }: InputCurrencyProps) {
   const input = useRef<HTMLInputElement>()
   const [formattedValue, setFormmatedValue] = useState(formatToCurrency(value))
 
   function onChangeInternal() {
-    if (!input.current) return
-    const onlyNumbers = (input.current.value.replace(/\D+/g, '') as any) / 100
+    let onlyNumbers = getOnlyNumber(input)
+    if (!onlyNumbers) return
+    console.log(onlyNumbers)
+    setFormmatedValue(formatToCurrency(onlyNumbers))
+    onChange(onlyNumbers)
+  }
+
+  function onBlurInternal() {
+    let onlyNumbers = getOnlyNumber(input)
+    if (!onlyNumbers) return
+
+    if (min && onlyNumbers < min) onlyNumbers = min
+    if (max && onlyNumbers > max) onlyNumbers = max
     setFormmatedValue(formatToCurrency(onlyNumbers))
     onChange(onlyNumbers)
   }
@@ -46,15 +57,20 @@ function InputCurrency({
         ref={input}
         data-testid="input-field"
         id={`${label} field`}
-        min={min}
-        max={max}
         required={required}
+        onBlur={onBlurInternal}
         value={formattedValue}
         onChange={onChangeInternal}
       />
       {addon && <FormLabelAddOn>{addon}</FormLabelAddOn>}
     </>
   )
+}
+
+function getOnlyNumber(ref: { current: any }) {
+  if (!ref.current) return
+  let onlyNumbers = ref.current.value.replace(/\D+/g, '') / 100
+  return onlyNumbers
 }
 
 export default InputCurrency
