@@ -19,6 +19,8 @@ describe('<HomePage>', () => {
   let fillCalculator: { (): void; (): void }
 
   beforeEach(() => {
+    jest.restoreAllMocks()
+
     component = render(<CalculatorPage antecipationDays={[1, 15, 30, 90]} />)
     submitButton = component.getByText('Consultar')
 

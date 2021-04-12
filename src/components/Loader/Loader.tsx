@@ -19,7 +19,7 @@ function Loader({ size }: LoaderProps) {
   }, [size])
 
   useEffect(() => {
-    if (progress === 0) {
+    if (progress === 0 || progress === 100) {
       document.body.style.cursor = 'auto'
     } else {
       document.body.style.cursor = 'wait'
