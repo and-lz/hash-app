@@ -118,11 +118,8 @@ Object {
             />
             <p
               class="sc-jrQzUz eCwHXR"
-              data-testid="result-row"
             >
-              <span
-                data-testid="day"
-              >
+              <span>
                 Amanhã
                 :
               </span>
@@ -130,18 +127,14 @@ Object {
               <br />
               <em
                 class="sc-ieebsP kRvHZI"
-                data-testid="value"
               >
                 R$ 0,00
               </em>
             </p>
             <p
               class="sc-jrQzUz eCwHXR"
-              data-testid="result-row"
             >
-              <span
-                data-testid="day"
-              >
+              <span>
                 Em 15 dias
                 :
               </span>
@@ -149,18 +142,14 @@ Object {
               <br />
               <em
                 class="sc-ieebsP kRvHZI"
-                data-testid="value"
               >
                 R$ 0,00
               </em>
             </p>
             <p
               class="sc-jrQzUz eCwHXR"
-              data-testid="result-row"
             >
-              <span
-                data-testid="day"
-              >
+              <span>
                 Em 30 dias
                 :
               </span>
@@ -168,18 +157,14 @@ Object {
               <br />
               <em
                 class="sc-ieebsP kRvHZI"
-                data-testid="value"
               >
                 R$ 0,00
               </em>
             </p>
             <p
               class="sc-jrQzUz eCwHXR"
-              data-testid="result-row"
             >
-              <span
-                data-testid="day"
-              >
+              <span>
                 Em 90 dias
                 :
               </span>
@@ -187,7 +172,6 @@ Object {
               <br />
               <em
                 class="sc-ieebsP kRvHZI"
-                data-testid="value"
               >
                 R$ 0,00
               </em>
@@ -309,11 +293,8 @@ Object {
           />
           <p
             class="sc-jrQzUz eCwHXR"
-            data-testid="result-row"
           >
-            <span
-              data-testid="day"
-            >
+            <span>
               Amanhã
               :
             </span>
@@ -321,18 +302,14 @@ Object {
             <br />
             <em
               class="sc-ieebsP kRvHZI"
-              data-testid="value"
             >
               R$ 0,00
             </em>
           </p>
           <p
             class="sc-jrQzUz eCwHXR"
-            data-testid="result-row"
           >
-            <span
-              data-testid="day"
-            >
+            <span>
               Em 15 dias
               :
             </span>
@@ -340,18 +317,14 @@ Object {
             <br />
             <em
               class="sc-ieebsP kRvHZI"
-              data-testid="value"
             >
               R$ 0,00
             </em>
           </p>
           <p
             class="sc-jrQzUz eCwHXR"
-            data-testid="result-row"
           >
-            <span
-              data-testid="day"
-            >
+            <span>
               Em 30 dias
               :
             </span>
@@ -359,18 +332,14 @@ Object {
             <br />
             <em
               class="sc-ieebsP kRvHZI"
-              data-testid="value"
             >
               R$ 0,00
             </em>
           </p>
           <p
             class="sc-jrQzUz eCwHXR"
-            data-testid="result-row"
           >
-            <span
-              data-testid="day"
-            >
+            <span>
               Em 90 dias
               :
             </span>
@@ -378,7 +347,6 @@ Object {
             <br />
             <em
               class="sc-ieebsP kRvHZI"
-              data-testid="value"
             >
               R$ 0,00
             </em>

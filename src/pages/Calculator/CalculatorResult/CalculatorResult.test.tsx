@@ -4,20 +4,29 @@ import CalculatorResult from './CalculatorResult'
 
 describe('<CalculatorResult />', () => {
   let component: RenderResult
+  let getByText: any
+  let queryByText: any
   beforeEach(() => {
     component = render(
-      <CalculatorResult data={{ 1: 3000, 15: 3050 }} days={[1, 15]} />,
+      <CalculatorResult
+        data={{ 1: 3000, 15: 3050, 30: 4000, 90: 5000 }}
+        days={[1, 15, 30, 90]}
+      />,
     )
+    getByText = component.getByText
+    queryByText = component.queryByText
   })
   test('Should render with the correct labels', () => {
-    const labels = component.queryAllByTestId('day')
-    expect(labels[0]).toHaveTextContent(`Amanhã:`)
-    expect(labels[1]).toHaveTextContent(`Em 15 dias:`)
+    getByText('Amanhã:')
+    getByText('Em 15 dias:')
+    getByText('Em 30 dias:')
+    getByText('Em 90 dias:')
   })
   test('Should render with the correct amount', () => {
-    const values = component.queryAllByTestId('value')
-    expect(values[0]).toHaveTextContent(`R$ 3.000,00`)
-    expect(values[1]).toHaveTextContent(`R$ 3.050,00`)
+    getByText(`R$ 3.000,00`)
+    getByText(`R$ 3.050,00`)
+    getByText(`R$ 4.000,00`)
+    getByText(`R$ 5.000,00`)
   })
   test('Should match snapshot', () => {
     expect(component).toMatchSnapshot()

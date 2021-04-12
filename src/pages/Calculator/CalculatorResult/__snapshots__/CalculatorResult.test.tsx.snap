@@ -18,11 +18,8 @@ Object {
       />
       <p
         class="sc-jRQAMF jcTbXm"
-        data-testid="result-row"
       >
-        <span
-          data-testid="day"
-        >
+        <span>
           Amanhã
           :
         </span>
@@ -30,18 +27,14 @@ Object {
         <br />
         <em
           class="sc-gKckTs gRhrMD"
-          data-testid="value"
         >
           R$ 3.000,00
         </em>
       </p>
       <p
         class="sc-jRQAMF jcTbXm"
-        data-testid="result-row"
       >
-        <span
-          data-testid="day"
-        >
+        <span>
           Em 15 dias
           :
         </span>
@@ -49,9 +42,38 @@ Object {
         <br />
         <em
           class="sc-gKckTs gRhrMD"
-          data-testid="value"
         >
           R$ 3.050,00
+        </em>
+      </p>
+      <p
+        class="sc-jRQAMF jcTbXm"
+      >
+        <span>
+          Em 30 dias
+          :
+        </span>
+         
+        <br />
+        <em
+          class="sc-gKckTs gRhrMD"
+        >
+          R$ 4.000,00
+        </em>
+      </p>
+      <p
+        class="sc-jRQAMF jcTbXm"
+      >
+        <span>
+          Em 90 dias
+          :
+        </span>
+         
+        <br />
+        <em
+          class="sc-gKckTs gRhrMD"
+        >
+          R$ 5.000,00
         </em>
       </p>
     </div>
@@ -70,11 +92,8 @@ Object {
     />
     <p
       class="sc-jRQAMF jcTbXm"
-      data-testid="result-row"
     >
-      <span
-        data-testid="day"
-      >
+      <span>
         Amanhã
         :
       </span>
@@ -82,18 +101,14 @@ Object {
       <br />
       <em
         class="sc-gKckTs gRhrMD"
-        data-testid="value"
       >
         R$ 3.000,00
       </em>
     </p>
     <p
       class="sc-jRQAMF jcTbXm"
-      data-testid="result-row"
     >
-      <span
-        data-testid="day"
-      >
+      <span>
         Em 15 dias
         :
       </span>
@@ -101,9 +116,38 @@ Object {
       <br />
       <em
         class="sc-gKckTs gRhrMD"
-        data-testid="value"
       >
         R$ 3.050,00
+      </em>
+    </p>
+    <p
+      class="sc-jRQAMF jcTbXm"
+    >
+      <span>
+        Em 30 dias
+        :
+      </span>
+       
+      <br />
+      <em
+        class="sc-gKckTs gRhrMD"
+      >
+        R$ 4.000,00
+      </em>
+    </p>
+    <p
+      class="sc-jRQAMF jcTbXm"
+    >
+      <span>
+        Em 90 dias
+        :
+      </span>
+       
+      <br />
+      <em
+        class="sc-gKckTs gRhrMD"
+      >
+        R$ 5.000,00
       </em>
     </p>
   </div>,
