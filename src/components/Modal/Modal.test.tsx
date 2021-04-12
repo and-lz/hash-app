@@ -3,49 +3,47 @@ import React from 'react'
 import { act } from 'react-dom/test-utils'
 import Modal from './Modal'
 
+const title = 'Basic title'
+const content = 'Basic content'
+const action = 'OK, close'
+
 describe('<Modal />', () => {
   let component: RenderResult
-  let modalTitle: HTMLElement | null
-  let modalContent: HTMLElement | null
-  let modalButtonAction: Node | Window
+  let getByText: any
+  let queryByText: any
+
   beforeEach(() => {
     component = render(
-      <Modal
-        title="Basic title"
-        visible
-        content="Basic content"
-        action="OK, close"
-        onClose={() => {}}
-      />,
+      <Modal title={title} visible content={content} action={action} />,
     )
-    modalTitle = component.queryByTestId('modal-title')
-    modalContent = component.queryByTestId('modal-content')
-    modalButtonAction = component.getByText('OK, close')
+    getByText = component.getByText
+    queryByText = component.queryByText
   })
   test('Should match snapshot', () => {
     expect(component).toMatchSnapshot()
   })
   test('Should render modal with the correct title, content, and button', () => {
-    expect(modalTitle).toHaveTextContent('Basic title')
-    expect(modalContent).toHaveTextContent('Basic content')
-    expect(modalButtonAction).toBeInTheDocument()
+    getByText(title)
+    getByText(content)
+    getByText(action)
   })
   test('Should not render modal when property visible was false', () => {
     component.rerender(
       <Modal title="Basic title" content="Basic content" action="OK, close" />,
     )
-    expect(modalTitle).not.toBeInTheDocument()
-    expect(modalContent).not.toBeInTheDocument()
+    expect(queryByText(title)).not.toBeInTheDocument()
+    expect(queryByText(content)).not.toBeInTheDocument()
   })
   test('Should hide modal after click on action button', () => {
-    expect(modalTitle).toBeInTheDocument()
-    expect(modalContent).toBeInTheDocument()
+    getByText(title)
+    getByText(content)
+    const button = getByText(action)
 
     act(() => {
-      fireEvent.click(modalButtonAction)
+      fireEvent.click(button)
     })
 
-    expect(modalTitle).not.toBeInTheDocument()
-    expect(modalContent).not.toBeInTheDocument()
+    expect(queryByText(title)).not.toBeInTheDocument()
+    expect(queryByText(content)).not.toBeInTheDocument()
   })
 })

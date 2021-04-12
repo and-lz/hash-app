@@ -6,10 +6,56 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-gKckTs jQzXAP"
+        class="sc-gKckTs dTHjqa"
       >
         <div
-          class="sc-iCfLBT cPNlZs"
+          class="sc-iCfLBT dFKqer"
+        >
+          <img
+            class="sc-pVTma cYWuZQ"
+            src="images/header.jpg"
+          />
+          <div
+            class="sc-furvIG gqRxPo"
+          >
+            <h1
+              class="sc-dkPtyc cjJKLj"
+              data-testid="modal-title"
+            >
+              Basic title
+            </h1>
+            <p
+              class="sc-eCImvq dQlTUo"
+              data-testid="modal-content"
+            >
+              Basic content
+            </p>
+            <hr
+              class="sc-gsDJrp OAImd"
+            />
+            <button
+              class="sc-bdvvaa ihLWWn"
+            >
+              OK, close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="sc-gKckTs dTHjqa"
+    >
+      <div
+        class="sc-iCfLBT dFKqer"
+      >
+        <img
+          class="sc-pVTma cYWuZQ"
+          src="images/header.jpg"
+        />
+        <div
+          class="sc-furvIG gqRxPo"
         >
           <h1
             class="sc-dkPtyc cjJKLj"
@@ -27,41 +73,11 @@ Object {
             class="sc-gsDJrp OAImd"
           />
           <button
-            class="sc-bdvvaa gJKuRC"
+            class="sc-bdvvaa ihLWWn"
           >
             OK, close
           </button>
         </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="sc-gKckTs jQzXAP"
-    >
-      <div
-        class="sc-iCfLBT cPNlZs"
-      >
-        <h1
-          class="sc-dkPtyc cjJKLj"
-          data-testid="modal-title"
-        >
-          Basic title
-        </h1>
-        <p
-          class="sc-eCImvq dQlTUo"
-          data-testid="modal-content"
-        >
-          Basic content
-        </p>
-        <hr
-          class="sc-gsDJrp OAImd"
-        />
-        <button
-          class="sc-bdvvaa gJKuRC"
-        >
-          OK, close
-        </button>
       </div>
     </div>
   </div>,
