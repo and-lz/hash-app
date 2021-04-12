@@ -1,5 +1,6 @@
-import { render, RenderResult } from '@testing-library/react'
+import { fireEvent, render, RenderResult } from '@testing-library/react'
 import React from 'react'
+import { act } from 'react-dom/test-utils'
 import Input from './Input'
 
 const label = 'Basic Input'
@@ -9,10 +10,16 @@ describe('<Input />', () => {
   let component: RenderResult
   let getByText: any
   let queryByText: any
+  let onChangeMock = jest.fn()
+  let onBlurMock = jest.fn()
+  let field: any
   beforeEach(() => {
-    component = render(<Input label={label} />)
+    component = render(
+      <Input onChange={onChangeMock} onBlur={onBlurMock} label={label} />,
+    )
     getByText = component.getByText
     queryByText = component.queryByText
+    field = component.getByLabelText(label)
   })
   test('Should match snapshot', () => {
     expect(component).toMatchSnapshot()
@@ -31,5 +38,17 @@ describe('<Input />', () => {
   test('should not render addon label when not passed prop', () => {
     component.rerender(<Input label={label} required />)
     expect(queryByText('Extra description')).not.toBeInTheDocument()
+  })
+  test('should call onChange with the correct value', () => {
+    act(() => {
+      fireEvent.change(field, { target: { value: 3000 } })
+    })
+    expect(onChangeMock).toBeCalledWith('3000')
+  })
+  test('should call onChange with the correct value', () => {
+    act(() => {
+      fireEvent.focusOut(field, { target: { value: 20000 } })
+    })
+    expect(onBlurMock).toBeCalledWith('20000')
   })
 })
