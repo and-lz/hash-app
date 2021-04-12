@@ -1,4 +1,5 @@
 import axios, { AxiosResponse } from 'axios'
+import api from '../api'
 
 const URL = 'https://frontend-challenge-7bu3nxh76a-uc.a.run.app'
 
@@ -23,7 +24,7 @@ async function APIAntecipation({
       mdr: Number(mdr),
       days,
     },
-    { timeout: 5000 },
+    { timeout: api.maxTimeToWaitForApisToAnswerBack },
   )
 }
 
