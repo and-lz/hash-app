@@ -1,4 +1,4 @@
-import Button from 'design-system/Button/Button'
+import Button from 'components/Button/Button'
 import { Spacer } from 'design-system/Spaces/Spaces'
 import { Heading1 } from 'design-system/Typography/Headings'
 import { Text } from 'design-system/Typography/Paragraph'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FlatButton } from './Button.styles'
+import { FlatButton } from 'design-system/Button/Button'
 
 interface ButtonProps extends Partial<HTMLButtonElement> {
   label: string

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import Button from 'design-system/Button/Button'
+import Button from 'components/Button/Button'
 import { Form } from 'design-system/Form/Form'
 import { Spacer } from 'design-system/Spaces/Spaces'
 import Input from 'components/Input/Input'
