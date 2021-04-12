@@ -32,7 +32,6 @@ function InputCurrency({
   function onChangeInternal() {
     let onlyNumbers = getOnlyNumber(input)
     if (!onlyNumbers) return
-    console.log(onlyNumbers)
     setFormmatedValue(formatToCurrency(onlyNumbers))
     onChange(onlyNumbers)
   }
