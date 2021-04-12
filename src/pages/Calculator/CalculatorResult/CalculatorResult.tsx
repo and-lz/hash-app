@@ -19,7 +19,7 @@ function CalculatorResult({ days, data }: ResultProps) {
       <Divider />
       <VerticalSpacer size="normal" />
       {days.map((day: number) => (
-        <HighlightText key={day}>
+        <HighlightText data-testid="result-row" key={day}>
           <span>{getFriendlyDayName(day)}:</span> <br />
           <Bold>{formatToCurrency(data[day])}</Bold>
         </HighlightText>

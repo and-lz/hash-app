@@ -35,7 +35,6 @@ function Input({
       </Label>
       <InputField
         ref={inputRef}
-        data-testid="input-field"
         id={`${label} field`}
         min={min}
         max={max}

@@ -14,7 +14,6 @@ Object {
       </label>
       <input
         class="sc-bdvvaa iEigXa"
-        data-testid="input-field"
         id="Basic Input field"
         type="text"
         value=""
@@ -31,7 +30,6 @@ Object {
     </label>
     <input
       class="sc-bdvvaa iEigXa"
-      data-testid="input-field"
       id="Basic Input field"
       type="text"
       value=""

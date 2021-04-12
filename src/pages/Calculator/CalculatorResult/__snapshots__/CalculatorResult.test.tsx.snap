@@ -18,6 +18,7 @@ Object {
       />
       <p
         class="sc-jRQAMF jcTbXm"
+        data-testid="result-row"
       >
         <span>
           Amanhã
@@ -33,6 +34,7 @@ Object {
       </p>
       <p
         class="sc-jRQAMF jcTbXm"
+        data-testid="result-row"
       >
         <span>
           Em 15 dias
@@ -48,6 +50,7 @@ Object {
       </p>
       <p
         class="sc-jRQAMF jcTbXm"
+        data-testid="result-row"
       >
         <span>
           Em 30 dias
@@ -63,6 +66,7 @@ Object {
       </p>
       <p
         class="sc-jRQAMF jcTbXm"
+        data-testid="result-row"
       >
         <span>
           Em 90 dias
@@ -92,6 +96,7 @@ Object {
     />
     <p
       class="sc-jRQAMF jcTbXm"
+      data-testid="result-row"
     >
       <span>
         Amanhã
@@ -107,6 +112,7 @@ Object {
     </p>
     <p
       class="sc-jRQAMF jcTbXm"
+      data-testid="result-row"
     >
       <span>
         Em 15 dias
@@ -122,6 +128,7 @@ Object {
     </p>
     <p
       class="sc-jRQAMF jcTbXm"
+      data-testid="result-row"
     >
       <span>
         Em 30 dias
@@ -137,6 +144,7 @@ Object {
     </p>
     <p
       class="sc-jRQAMF jcTbXm"
+      data-testid="result-row"
     >
       <span>
         Em 90 dias

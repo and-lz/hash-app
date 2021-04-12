@@ -18,7 +18,6 @@ Object {
         </label>
         <input
           class="sc-hKwCoD fWjqww"
-          data-testid="input-field"
           id="Informe o valor da renda field"
           required=""
           type="text"
@@ -37,7 +36,6 @@ Object {
         </label>
         <input
           class="sc-hKwCoD fWjqww"
-          data-testid="input-field"
           id="Em quantas parcelas field"
           max="12"
           min="1"
@@ -63,7 +61,6 @@ Object {
         </label>
         <input
           class="sc-hKwCoD fWjqww"
-          data-testid="input-field"
           id="Informe o percentual de MDR field"
           min="0"
           required=""
@@ -95,7 +92,6 @@ Object {
       </label>
       <input
         class="sc-hKwCoD fWjqww"
-        data-testid="input-field"
         id="Informe o valor da renda field"
         required=""
         type="text"
@@ -114,7 +110,6 @@ Object {
       </label>
       <input
         class="sc-hKwCoD fWjqww"
-        data-testid="input-field"
         id="Em quantas parcelas field"
         max="12"
         min="1"
@@ -140,7 +135,6 @@ Object {
       </label>
       <input
         class="sc-hKwCoD fWjqww"
-        data-testid="input-field"
         id="Informe o percentual de MDR field"
         min="0"
         required=""

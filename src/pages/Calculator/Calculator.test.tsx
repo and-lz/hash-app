@@ -1,33 +1,48 @@
-import { fireEvent, render, RenderResult, screen } from '@testing-library/react'
+import { fireEvent, render, RenderResult } from '@testing-library/react'
 import APIAntecipation from 'infrastructure/api/APIAntecipation/APIAntecipation'
 import { removeWhitespaceInString } from 'infrastructure/sanitization/whitespace'
 import React from 'react'
 import { act } from 'react-dom/test-utils'
 import CalculatorPage from './Calculator'
 
+const noConnectionModalTitle = 'Você está sem conexão'
+const errorModalTitle = 'Não foi possível completar sua solicitação'
+const buttonLabel = 'Consultar'
+
+const amountLabel = 'Informe o valor da renda *'
+const installmentsLabel = 'Em quantas parcelas *'
+const mdrLabel = 'Informe o percentual de MDR *'
+
 jest.mock('infrastructure/api/APIAntecipation/APIAntecipation')
 const mockedAPIAntecipation = APIAntecipation as jest.MockedFunction<
   typeof APIAntecipation
 >
 
-describe('<HomePage>', () => {
+describe('<CalculatorPage />', () => {
   let component: RenderResult
-  let amountField: Node | Window
-  let installmentstField: Node | Window
-  let mdrField: Node | Window
-  let submitButton: Node | Window
-  let fillCalculator: { (): void; (): void }
+  let amountField: any
+  let installmentstField: any
+  let mdrField: any
+  let submitButton: any
+  let getByText: any
+  let queryByText: any
+  let getByLabelText: any
+  let fillCalculatorFieldsWithValidValues: { (): void; (): void }
 
   beforeEach(() => {
     jest.restoreAllMocks()
 
     component = render(<CalculatorPage antecipationDays={[1, 15, 30, 90]} />)
-    submitButton = component.getByText('Consultar')
+    getByText = component.getByText
+    queryByText = component.queryByText
+    getByLabelText = component.getByLabelText
+    submitButton = getByText(buttonLabel)
 
-    fillCalculator = () => {
-      amountField = component.getAllByTestId('input-field')[0]
-      installmentstField = component.getAllByTestId('input-field')[1]
-      mdrField = component.getAllByTestId('input-field')[2]
+    amountField = getByLabelText(amountLabel)
+    installmentstField = getByLabelText(installmentsLabel)
+    mdrField = getByLabelText(mdrLabel)
+
+    fillCalculatorFieldsWithValidValues = () => {
       act(() => {
         fireEvent.change(amountField, { target: { value: '300000' } })
         fireEvent.change(installmentstField, { target: { value: '12' } })
@@ -35,22 +50,23 @@ describe('<HomePage>', () => {
       })
     }
   })
-  test('Should render page without erros', () => {
-    const label = screen.getByText(/Simule sua antecipação/i)
-    expect(label).toBeInTheDocument()
-  })
-  test('Should match snapshot', () => {
-    expect(component).toMatchSnapshot()
+  describe('Renderization', () => {
+    test('Should render page with title', () => {
+      getByText('Simule sua antecipação')
+    })
+    test('Should match snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
   })
   describe('Behavior', () => {
     test('Should allow the fields to be filled', () => {
-      fillCalculator()
+      fillCalculatorFieldsWithValidValues()
       expect(removeWhitespaceInString(amountField.value)).toBe('R$3.000,00')
       expect(installmentstField.value).toBe('12')
       expect(mdrField.value).toBe('2')
     })
     test('Should present the error modal, after a failing request to the api', async () => {
-      fillCalculator()
+      fillCalculatorFieldsWithValidValues()
 
       mockedAPIAntecipation.mockRejectedValue('')
 
@@ -58,14 +74,10 @@ describe('<HomePage>', () => {
         fireEvent.click(submitButton)
       })
 
-      const errorTitle = screen.queryByText(
-        /Não foi possível completar sua solicitação/i,
-      )
-
-      expect(errorTitle).toBeInTheDocument()
+      getByText(errorModalTitle)
     })
     test('Should present antecipation values, after a successful request to the api', async () => {
-      fillCalculator()
+      fillCalculatorFieldsWithValidValues()
 
       // @ts-ignore
       mockedAPIAntecipation.mockResolvedValue({
@@ -91,7 +103,7 @@ describe('<HomePage>', () => {
       expect(day90).toHaveTextContent('Em 90 dias: R$ 8.000,00')
     })
     test('Should present no connection modal when the internet is off', async () => {
-      fillCalculator()
+      fillCalculatorFieldsWithValidValues()
 
       jest.spyOn(navigator, 'onLine', 'get').mockReturnValue(false)
 
@@ -99,11 +111,10 @@ describe('<HomePage>', () => {
         fireEvent.click(submitButton)
       })
 
-      const titleNoConnectionModal = screen.getByText(/Você está sem conexão/i)
-      expect(titleNoConnectionModal).toBeInTheDocument()
+      getByText(noConnectionModalTitle)
     })
     test('Should not present no connection modal when the internet is on', async () => {
-      fillCalculator()
+      fillCalculatorFieldsWithValidValues()
 
       jest.spyOn(navigator, 'onLine', 'get').mockReturnValue(true)
 
@@ -111,10 +122,7 @@ describe('<HomePage>', () => {
         fireEvent.click(submitButton)
       })
 
-      const titleNoConnectionModal = screen.queryByText(
-        /Você está sem conexão/i,
-      )
-      expect(titleNoConnectionModal).not.toBeInTheDocument()
+      expect(queryByText(noConnectionModalTitle)).not.toBeInTheDocument()
     })
   })
 })
