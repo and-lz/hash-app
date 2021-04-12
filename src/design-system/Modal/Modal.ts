@@ -22,7 +22,7 @@ export const ModalBackground = styled.div<ModalProps>`
   justify-content: center;
   padding: 20px;
   backdrop-filter: blur(5px);
-  align-items: flex-end;
+  align-items: center;
   animation: ${fadeIn} 250ms ease 1 forwards;
 `
 
@@ -38,7 +38,7 @@ const slide = keyframes`
 `
 export const ModalBox = styled.div`
   background-color: white;
-  width: 380px;
+  width: 320px;
   border-radius: 4px;
   overflow: auto;
   text-align: center;
@@ -47,13 +47,21 @@ export const ModalBox = styled.div`
 `
 
 export const ModalContent = styled.div`
-  padding: 20px 50px;
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  z-index: 9;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: -30px;
 `
 
 export const ModalImage = styled.img.attrs({
   src: 'images/header.jpg',
 })`
   width: 100%;
+  height: 200px;
   margin-bottom: 0px;
   display: block;
+  object-fit: cover;
 `

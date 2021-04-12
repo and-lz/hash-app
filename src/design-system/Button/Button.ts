@@ -14,6 +14,8 @@ export const FlatButton = styled.button<FlatButtonProps>`
   font-family: Source Sans Pro;
   font-style: normal;
   border: 0;
+  display: block;
+  width: 100%;
   transition: all ${DesignSystem.motion.duration} ${DesignSystem.motion.easing};
   &:hover {
     filter: brightness(110%);

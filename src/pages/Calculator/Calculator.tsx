@@ -43,7 +43,7 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
       setLoadingProgress(75)
       setAntecipationValuesData(responseAPIAntecipation.data)
       setLoadingProgress(100)
-    } catch (e) {
+    } catch {
       setLoadingProgress(100)
       setShowErrorModal(true)
       setAntecipationValuesData(mapDaysToInitialData(antecipationDays))
@@ -59,6 +59,7 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
         onClose={() => {
           setShowNoConnectionModal(false)
         }}
+        action="OK"
         content="Para consultar os valores, é necessário conexão. Por favor, tente mais tarde."
       />
       <Modal
@@ -67,7 +68,8 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
         onClose={() => {
           setShowErrorModal(false)
         }}
-        content="Aconteceu algum erro de servidor, não sendo possível completar sua solicitação. Por favor, tente mais tarde."
+        action="OK"
+        content="Por favor, tente mais tarde."
       />
       <Card width="608px">
         <CardMainContent width="377px">
