@@ -1,3 +1,4 @@
+import { removeWhitespaceInString } from 'infrastructure/sanitize/whitespace'
 import { formatToCurrency } from './currency'
 
 describe('formatToCurrency', () => {
@@ -14,6 +15,3 @@ describe('formatToCurrency', () => {
     expect(numberFormmated).toBe(currencyExpected)
   })
 })
-
-const removeWhitespaceInString = (value: string): string =>
-  value.replace(/\s/g, '')
