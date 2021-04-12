@@ -8,7 +8,7 @@ Object {
   >
     <div>
       <div
-        class="sc-crHlIS hgNutx"
+        class="sc-bqiQRQ gUKjqK"
       >
         <div
           class="sc-eCImvq leqJFt"
@@ -27,10 +27,10 @@ Object {
               Simule sua antecipação
             </h1>
             <form
-              class="sc-egiSv"
+              class="sc-ksdxAp"
             >
               <label
-                class="sc-ksdxAp hVtOGY"
+                class="sc-fotPbf dvHluU"
                 for="Informe o valor da renda field"
               >
                 Informe o valor da renda
@@ -38,7 +38,7 @@ Object {
                 *
               </label>
               <input
-                class="sc-bqiQRQ crfOzM"
+                class="sc-hBURRC lnopc"
                 data-testid="input-field"
                 id="Informe o valor da renda field"
                 required=""
@@ -48,7 +48,7 @@ Object {
                 class="sc-gKckTs eAcrHf"
               />
               <label
-                class="sc-ksdxAp hVtOGY"
+                class="sc-fotPbf dvHluU"
                 for="Em quantas parcelas field"
               >
                 Em quantas parcelas
@@ -56,7 +56,7 @@ Object {
                 *
               </label>
               <input
-                class="sc-bqiQRQ crfOzM"
+                class="sc-hBURRC lnopc"
                 data-testid="input-field"
                 id="Em quantas parcelas field"
                 max="12"
@@ -66,7 +66,7 @@ Object {
                 value="12"
               />
               <div
-                class="sc-hBURRC biTnsn"
+                class="sc-fFehDp dFwIzm"
               >
                 Máximo de 12 parcelas
               </div>
@@ -74,7 +74,7 @@ Object {
                 class="sc-gKckTs eAcrHf"
               />
               <label
-                class="sc-ksdxAp hVtOGY"
+                class="sc-fotPbf dvHluU"
                 for="Informe o percentual de MDR field"
               >
                 Informe o percentual de MDR
@@ -82,7 +82,7 @@ Object {
                 *
               </label>
               <input
-                class="sc-bqiQRQ crfOzM"
+                class="sc-hBURRC lnopc"
                 data-testid="input-field"
                 id="Informe o percentual de MDR field"
                 min="0"
@@ -94,7 +94,7 @@ Object {
                 class="sc-gKckTs eAcrHf"
               />
               <button
-                class="sc-jRQAMF cfpqmn"
+                class="sc-jRQAMF cAVkxC"
               >
                 Consultar
               </button>
@@ -110,7 +110,7 @@ Object {
               Você receberá:
             </h1>
             <hr
-              class="sc-fotPbf dichcJ"
+              class="sc-bkkfTU gPBuuN"
             />
             <hr
               class="sc-gKckTs eAcrHf"
@@ -128,7 +128,7 @@ Object {
                
               <br />
               <em
-                class="sc-fFehDp gjMugN"
+                class="sc-ieebsP kRvHZI"
                 data-testid="value"
               >
                 R$ 0,00
@@ -147,7 +147,7 @@ Object {
                
               <br />
               <em
-                class="sc-fFehDp gjMugN"
+                class="sc-ieebsP kRvHZI"
                 data-testid="value"
               >
                 R$ 0,00
@@ -166,7 +166,7 @@ Object {
                
               <br />
               <em
-                class="sc-fFehDp gjMugN"
+                class="sc-ieebsP kRvHZI"
                 data-testid="value"
               >
                 R$ 0,00
@@ -185,7 +185,7 @@ Object {
                
               <br />
               <em
-                class="sc-fFehDp gjMugN"
+                class="sc-ieebsP kRvHZI"
                 data-testid="value"
               >
                 R$ 0,00
@@ -198,7 +198,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-crHlIS hgNutx"
+      class="sc-bqiQRQ gUKjqK"
     >
       <div
         class="sc-eCImvq leqJFt"
@@ -217,10 +217,10 @@ Object {
             Simule sua antecipação
           </h1>
           <form
-            class="sc-egiSv"
+            class="sc-ksdxAp"
           >
             <label
-              class="sc-ksdxAp hVtOGY"
+              class="sc-fotPbf dvHluU"
               for="Informe o valor da renda field"
             >
               Informe o valor da renda
@@ -228,7 +228,7 @@ Object {
               *
             </label>
             <input
-              class="sc-bqiQRQ crfOzM"
+              class="sc-hBURRC lnopc"
               data-testid="input-field"
               id="Informe o valor da renda field"
               required=""
@@ -238,7 +238,7 @@ Object {
               class="sc-gKckTs eAcrHf"
             />
             <label
-              class="sc-ksdxAp hVtOGY"
+              class="sc-fotPbf dvHluU"
               for="Em quantas parcelas field"
             >
               Em quantas parcelas
@@ -246,7 +246,7 @@ Object {
               *
             </label>
             <input
-              class="sc-bqiQRQ crfOzM"
+              class="sc-hBURRC lnopc"
               data-testid="input-field"
               id="Em quantas parcelas field"
               max="12"
@@ -256,7 +256,7 @@ Object {
               value="12"
             />
             <div
-              class="sc-hBURRC biTnsn"
+              class="sc-fFehDp dFwIzm"
             >
               Máximo de 12 parcelas
             </div>
@@ -264,7 +264,7 @@ Object {
               class="sc-gKckTs eAcrHf"
             />
             <label
-              class="sc-ksdxAp hVtOGY"
+              class="sc-fotPbf dvHluU"
               for="Informe o percentual de MDR field"
             >
               Informe o percentual de MDR
@@ -272,7 +272,7 @@ Object {
               *
             </label>
             <input
-              class="sc-bqiQRQ crfOzM"
+              class="sc-hBURRC lnopc"
               data-testid="input-field"
               id="Informe o percentual de MDR field"
               min="0"
@@ -284,7 +284,7 @@ Object {
               class="sc-gKckTs eAcrHf"
             />
             <button
-              class="sc-jRQAMF cfpqmn"
+              class="sc-jRQAMF cAVkxC"
             >
               Consultar
             </button>
@@ -300,7 +300,7 @@ Object {
             Você receberá:
           </h1>
           <hr
-            class="sc-fotPbf dichcJ"
+            class="sc-bkkfTU gPBuuN"
           />
           <hr
             class="sc-gKckTs eAcrHf"
@@ -318,7 +318,7 @@ Object {
              
             <br />
             <em
-              class="sc-fFehDp gjMugN"
+              class="sc-ieebsP kRvHZI"
               data-testid="value"
             >
               R$ 0,00
@@ -337,7 +337,7 @@ Object {
              
             <br />
             <em
-              class="sc-fFehDp gjMugN"
+              class="sc-ieebsP kRvHZI"
               data-testid="value"
             >
               R$ 0,00
@@ -356,7 +356,7 @@ Object {
              
             <br />
             <em
-              class="sc-fFehDp gjMugN"
+              class="sc-ieebsP kRvHZI"
               data-testid="value"
             >
               R$ 0,00
@@ -375,7 +375,7 @@ Object {
              
             <br />
             <em
-              class="sc-fFehDp gjMugN"
+              class="sc-ieebsP kRvHZI"
               data-testid="value"
             >
               R$ 0,00
