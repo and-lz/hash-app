@@ -43,7 +43,7 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
       setLoadingProgress(75)
       setAntecipationValuesData(responseAPIAntecipation.data)
       setLoadingProgress(100)
-    } catch {
+    } catch (e) {
       setLoadingProgress(100)
       setShowErrorModal(true)
       setAntecipationValuesData(mapDaysToInitialData(antecipationDays))

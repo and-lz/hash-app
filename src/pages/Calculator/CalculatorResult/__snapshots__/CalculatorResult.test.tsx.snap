@@ -18,6 +18,7 @@ Object {
       />
       <p
         class="sc-jRQAMF jcTbXm"
+        data-testid="result-row"
       >
         <span
           data-testid="day"
@@ -36,6 +37,7 @@ Object {
       </p>
       <p
         class="sc-jRQAMF jcTbXm"
+        data-testid="result-row"
       >
         <span
           data-testid="day"
@@ -68,6 +70,7 @@ Object {
     />
     <p
       class="sc-jRQAMF jcTbXm"
+      data-testid="result-row"
     >
       <span
         data-testid="day"
@@ -86,6 +89,7 @@ Object {
     </p>
     <p
       class="sc-jRQAMF jcTbXm"
+      data-testid="result-row"
     >
       <span
         data-testid="day"
