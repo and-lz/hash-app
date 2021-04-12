@@ -19,7 +19,6 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
   const [showNoConnectionModal, setShowNoConnectionModal] = useState(false)
   const [showErrorModal, setShowErrorModal] = useState(false)
   const [loadingProgress, setLoadingProgress] = useState(0)
-  const [animate, setAnimate] = useState(false)
 
   const [antecipationValuesData, setAntecipationValuesData] = useState(
     mapDaysToInitialData(antecipationDays),
