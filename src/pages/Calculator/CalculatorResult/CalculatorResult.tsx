@@ -3,7 +3,7 @@ import { Spacer } from 'design-system/Spaces/Spaces'
 import { Heading2 } from 'design-system/Typography/Headings'
 import { HighlightText } from 'design-system/Typography/Paragraph'
 import { Bold } from 'design-system/Typography/Styles'
-import { formatToCurrency } from 'infrastructure/format/currency'
+import { formatToCurrency } from 'infrastructure/currency/currency'
 import React from 'react'
 import { getFriendlyDayName } from '../Calculator.helpers'
 

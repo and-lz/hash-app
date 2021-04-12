@@ -3,7 +3,7 @@ import {
   FormLabel,
   FormLabelAddOn,
 } from 'design-system/Form/Label/Label.styles'
-import { formatToCurrency } from 'infrastructure/format/currency'
+import { formatToCurrency } from 'infrastructure/currency/currency'
 import React, { useRef, useState } from 'react'
 
 interface InputCurrencyProps {
