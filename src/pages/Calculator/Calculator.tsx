@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card, CardHighlight, CardMainContent } from 'design-system/Card/Card'
 import Loader from 'components/Loader/Loader'
 import Modal from 'components/Modal/Modal'
@@ -10,6 +10,7 @@ import CalculatorForm from './CalculatorForm/CalculatorForm'
 import CalculatorResult from './CalculatorResult/CalculatorResult'
 import { VerticalSpacer } from 'design-system/Spaces/Spaces'
 import { Container } from 'design-system/Container/Container'
+import { SlideInUp } from 'design-system/Motion/SlideUpIn'
 
 interface CalculatorPageProps {
   antecipationDays: number[]
@@ -19,6 +20,7 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
   const [showNoConnectionModal, setShowNoConnectionModal] = useState(false)
   const [showErrorModal, setShowErrorModal] = useState(false)
   const [loadingProgress, setLoadingProgress] = useState(0)
+  const [animate, setAnimate] = useState(false)
 
   const [antecipationValuesData, setAntecipationValuesData] = useState(
     mapDaysToInitialData(antecipationDays),
@@ -83,6 +85,7 @@ function CalculatorPage({ antecipationDays }: CalculatorPageProps) {
         </CardMainContent>
         <CardHighlight width="231px">
           <CalculatorResult
+            animate={loadingProgress === 100}
             days={antecipationDays}
             data={antecipationValuesData}
           />

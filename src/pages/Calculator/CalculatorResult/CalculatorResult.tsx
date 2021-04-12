@@ -1,4 +1,5 @@
 import { Divider } from 'design-system/Divider/Divider'
+import { SlideInUp } from 'design-system/Motion/SlideUpIn'
 import { VerticalSpacer } from 'design-system/Spaces/Spaces'
 import { Heading2 } from 'design-system/Typography/Headings'
 import { HighlightText } from 'design-system/Typography/Paragraph'
@@ -10,22 +11,25 @@ import { getFriendlyDayName } from '../Calculator.helpers'
 interface ResultProps {
   days: number[]
   data: any
+  animate: boolean
 }
 
-function CalculatorResult({ days, data }: ResultProps) {
+function CalculatorResult({ days, data, animate }: ResultProps) {
   return (
     <>
       <Heading2>Você receberá:</Heading2>
       <Divider />
       <VerticalSpacer size="normal" />
-      {days.map((day: number) => (
+      {days.map((day: number, index: number) => (
         <>
-          <HighlightText data-testid="result-row" key={day}>
-            <span>{getFriendlyDayName(day)}:</span> <br />
-            <VerticalSpacer size="tiny" />
-            <Bold>{formatToCurrency(data[day])}</Bold>
-          </HighlightText>
-          <VerticalSpacer />
+          <SlideInUp animate={animate} delay={100 * index}>
+            <HighlightText data-testid="result-row" key={day}>
+              <span>{getFriendlyDayName(day)}:</span> <br />
+              <VerticalSpacer size="tiny" />
+              <Bold>{formatToCurrency(data[day])}</Bold>
+            </HighlightText>
+            <VerticalSpacer />
+          </SlideInUp>
         </>
       ))}
     </>
