@@ -16,8 +16,6 @@ Object {
         class="sc-bdvvaa iEigXa"
         data-testid="input-field"
         id="Basic Input field"
-        max="3"
-        min="1"
         type="text"
         value=""
       />
@@ -35,8 +33,6 @@ Object {
       class="sc-bdvvaa iEigXa"
       data-testid="input-field"
       id="Basic Input field"
-      max="3"
-      min="1"
       type="text"
       value=""
     />

@@ -8,7 +8,7 @@ interface InputProps {
   label: string
   addon?: string
   value?: string | number
-  onChange: Function
+  onChange?: Function
   min?: number
   max?: number
   placeholder?: 'string'
@@ -22,7 +22,7 @@ function Input({
   value,
   min,
   max,
-  onChange,
+  onChange = (value: any) => value,
 }: InputProps) {
   return (
     <>

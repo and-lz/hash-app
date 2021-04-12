@@ -1,45 +1,35 @@
+import { render, RenderResult } from '@testing-library/react'
 import React from 'react'
-import { cleanup, render, RenderResult, screen } from '@testing-library/react'
 import Input from './Input'
+
+const label = 'Basic Input'
+const addon = 'Extra description'
 
 describe('<Input />', () => {
   let component: RenderResult
+  let getByText: any
+  let queryByText: any
   beforeEach(() => {
-    component = render(
-      <Input label="Basic Input" min={1} max={3} onChange={() => {}} />,
-    )
+    component = render(<Input label={label} />)
+    getByText = component.getByText
+    queryByText = component.queryByText
   })
   test('Should match snapshot', () => {
     expect(component).toMatchSnapshot()
   })
   test('should render basic input with label', () => {
-    const label = screen.getByText(/Basic Input/i)
-    expect(label).toBeInTheDocument()
+    getByText(label)
   })
   test('should render * on label when input is required', () => {
-    let component = render(
-      <Input label="Basic Input" required onChange={() => {}} />,
-    )
-    const label = component.getByLabelText('Basic Input *')
-    expect(label).toBeInTheDocument()
+    let component = render(<Input label={label} required />)
+    getByText('Basic Input *')
   })
   test('should render addon when passed', () => {
-    let component = render(
-      <Input
-        label="Basic Input"
-        addon="Extra description"
-        required
-        onChange={() => {}}
-      />,
-    )
-    const label = component.getByText('Extra description')
-    expect(label).toBeInTheDocument()
+    component.rerender(<Input label={label} addon={addon} required />)
+    getByText(addon)
   })
   test('should not render addon label when not passed prop', () => {
-    let component = render(
-      <Input label="Basic Input" required onChange={() => {}} />,
-    )
-    const label = component.queryByText('Extra description')
-    expect(label).toBeFalsy()
+    component.rerender(<Input label={label} required />)
+    expect(queryByText('Extra description')).not.toBeInTheDocument()
   })
 })
