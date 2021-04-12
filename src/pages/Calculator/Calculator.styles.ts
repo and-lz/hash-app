@@ -5,5 +5,6 @@ export const Page = styled.div`
   background-color: ${DesignSystem.colors.catskillWhite};
   display: grid;
   place-items: center;
-  height: 100%;
+  min-height: 100%;
+  padding: 100px;
 `
