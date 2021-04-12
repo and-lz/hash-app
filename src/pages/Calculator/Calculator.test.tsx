@@ -1,6 +1,6 @@
 import { fireEvent, render, RenderResult, screen } from '@testing-library/react'
 import APIAntecipation from 'infrastructure/api/APIAntecipation/APIAntecipation'
-import { removeWhitespaceInString } from 'infrastructure/sanitize/whitespace'
+import { removeWhitespaceInString } from 'infrastructure/sanitization/whitespace'
 import React from 'react'
 import { act } from 'react-dom/test-utils'
 import CalculatorPage from './Calculator'

@@ -1,4 +1,4 @@
-import { removeWhitespaceInString } from 'infrastructure/sanitize/whitespace'
+import { removeWhitespaceInString } from 'infrastructure/sanitization/whitespace'
 import { formatToCurrency } from './currency'
 
 describe('formatToCurrency', () => {
