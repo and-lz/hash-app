@@ -10,7 +10,11 @@ export const LoadBar = styled.div<LoadBarProps>`
   z-index: 9999;
   width: ${props => props.size}%;
   height: 10px;
-  background: linear-gradient(to right, #5d9cec, #3d75bb);
+  background: linear-gradient(
+    to left,
+    ${DesignSystem.colors.cornflowerBlue},
+    ${DesignSystem.colors.steelBlue}
+  );
   ${props => {
     if (props.size !== 0) {
       return `transition: all ${DesignSystem.motion.duration} ${DesignSystem.motion.easing};`

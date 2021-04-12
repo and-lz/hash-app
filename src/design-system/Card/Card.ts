@@ -14,8 +14,7 @@ export const Card = styled.div<CardProps>`
   display: flex;
   transition: all ${DesignSystem.motion.duration} ${DesignSystem.motion.easing};
   &:focus-within {
-    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2);
-    transform: scale(1.01);
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
   }
 `
 
