@@ -8,16 +8,16 @@ import { Modal as ModalBox, ModalBackground } from 'design-system/Modal/Modal'
 interface ModalProps {
   title: string
   content?: string
-  visible: boolean
-  onClose: Function
+  visible?: boolean
+  onClose?: Function
   action?: string
 }
 
 function Modal({
   title,
   content,
-  visible,
-  onClose,
+  visible = false,
+  onClose = () => {},
   action = 'Fechar',
 }: ModalProps) {
   const [showModal, setShowModal] = useState(visible)
@@ -31,8 +31,8 @@ function Modal({
     <>
       <ModalBackground visible={showModal}>
         <ModalBox>
-          <Heading1>{title}</Heading1>
-          <Text>{content}</Text>
+          <Heading1 data-testid="modal-title">{title}</Heading1>
+          <Text data-testid="modal-content">{content}</Text>
           <Spacer size="big" />
           <Button
             label={action}
