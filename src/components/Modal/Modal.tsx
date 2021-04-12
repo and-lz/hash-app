@@ -40,7 +40,7 @@ function Modal({
           <ModalContent>
             <Heading1 data-testid="modal-title">{title}</Heading1>
             <Text data-testid="modal-content">{content}</Text>
-            <VerticalSpacer size="big" />
+            <VerticalSpacer />
             <Button
               autofocus
               label={action}

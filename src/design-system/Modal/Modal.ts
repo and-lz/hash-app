@@ -47,12 +47,13 @@ export const ModalBox = styled.div`
 `
 
 export const ModalContent = styled.div`
-  padding: 20px 30px;
+  padding: 20px 15px;
   background-color: white;
   position: relative;
   z-index: 9;
   width: 90%;
   margin: 0 auto;
+  border-radius: 4px;
   margin-top: -30px;
 `
 

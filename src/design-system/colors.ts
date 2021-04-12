@@ -8,4 +8,5 @@ export const colors = {
   mystic: '#dde6e9',
   cornflowerBlue: '#66afe9',
   cornflowerBlue2: '#5D9CEC',
+  catskillWhite: '#F5F7FA',
 }
