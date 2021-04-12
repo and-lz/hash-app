@@ -15,10 +15,12 @@ describe('<HomePage>', () => {
   let amountField: Node | Window
   let installmentstField: Node | Window
   let mdrField: Node | Window
+  let submitButton: Node | Window
   let fillCalculator: { (): void; (): void }
 
   beforeEach(() => {
     component = render(<CalculatorPage antecipationDays={[1, 15, 30, 90]} />)
+    submitButton = component.getByText('Consultar')
 
     fillCalculator = () => {
       amountField = component.getAllByTestId('input-field')[0]
@@ -48,8 +50,6 @@ describe('<HomePage>', () => {
     test('Should present the error modal, after a failing request to the api', async () => {
       fillCalculator()
 
-      const submitButton = component.getByText('Consultar')
-
       mockedAPIAntecipation.mockRejectedValue('')
 
       await act(async () => {
@@ -64,8 +64,6 @@ describe('<HomePage>', () => {
     })
     test('Should present antecipation values, after a successful request to the api', async () => {
       fillCalculator()
-
-      const submitButton = component.getByText('Consultar')
 
       // @ts-ignore
       mockedAPIAntecipation.mockResolvedValue({
@@ -89,6 +87,32 @@ describe('<HomePage>', () => {
       expect(day15).toHaveTextContent('Em 15 dias: R$ 4.000,00')
       expect(day30).toHaveTextContent('Em 30 dias: R$ 6.000,00')
       expect(day90).toHaveTextContent('Em 90 dias: R$ 8.000,00')
+    })
+    test('Should present no connection modal when the internet is off', async () => {
+      fillCalculator()
+
+      jest.spyOn(navigator, 'onLine', 'get').mockReturnValue(false)
+
+      await act(async () => {
+        fireEvent.click(submitButton)
+      })
+
+      const titleNoConnectionModal = screen.getByText(/Você está sem conexão/i)
+      expect(titleNoConnectionModal).toBeInTheDocument()
+    })
+    test('Should not present no connection modal when the internet is on', async () => {
+      fillCalculator()
+
+      jest.spyOn(navigator, 'onLine', 'get').mockReturnValue(true)
+
+      await act(async () => {
+        fireEvent.click(submitButton)
+      })
+
+      const titleNoConnectionModal = screen.queryByText(
+        /Você está sem conexão/i,
+      )
+      expect(titleNoConnectionModal).not.toBeInTheDocument()
     })
   })
 })
