@@ -39,10 +39,12 @@ function Modal({
           <ModalImage />
           <ModalContent>
             <Heading1 data-testid="modal-title">{title}</Heading1>
-            <Text data-testid="modal-content">{content}</Text>
             <VerticalSpacer />
+            <Text data-testid="modal-content">{content}</Text>
+            <VerticalSpacer size="big" />
             <Button
               autofocus
+              type="button"
               label={action}
               onClick={() => {
                 setShowModal(false)

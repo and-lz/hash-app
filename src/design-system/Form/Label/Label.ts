@@ -9,6 +9,7 @@ export const Label = styled.label`
   font-size: 14px;
   line-height: 18px;
   margin-bottom: 6px;
+  color: #656565;
 `
 
 export const Addon = styled.div`
