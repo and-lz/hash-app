@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import DesignSystem from 'design-system'
 
 interface CardProps {
   width: string
@@ -11,6 +12,11 @@ export const Card = styled.div<CardProps>`
   border-radius: 4px;
   width: ${props => props.width};
   display: flex;
+  transition: all ${DesignSystem.motion.duration} ${DesignSystem.motion.easing};
+  &:focus-within {
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+  }
 `
 
 interface CardAreaProps {
