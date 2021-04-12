@@ -1,23 +1,18 @@
+import { fireEvent } from '@testing-library/dom'
 import { render, RenderResult } from '@testing-library/react'
-import React from 'react'
-import InputCurrency from './InputCurrency'
-import { fireEvent, screen } from '@testing-library/dom'
-import { act } from 'react-dom/test-utils'
 import { removeWhitespaceInString } from 'infrastructure/sanitization/whitespace'
+import React from 'react'
+import { act } from 'react-dom/test-utils'
+import InputCurrency from './InputCurrency'
 
 const label = 'Basic Input'
-const addon = 'Extra description'
 
 describe('<InputCurrency />', () => {
   let component: RenderResult
-  let getByText: any
-  let queryByText: any
   let field: any
   beforeEach(() => {
     component = render(<InputCurrency min={1000} max={3000} label={label} />)
-    getByText = component.getByText
-    queryByText = component.queryByText
-    field = component.getByLabelText('Basic Input')
+    field = component.getByLabelText(label)
   })
   test('Should match snapshot', () => {
     expect(component).toMatchSnapshot()
