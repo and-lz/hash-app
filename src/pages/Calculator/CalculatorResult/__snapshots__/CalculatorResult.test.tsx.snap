@@ -6,18 +6,139 @@ Object {
   "baseElement": <body>
     <div>
       <h1
-        class="sc-hKwCoD gjxRVc"
+        class="sc-eCImvq gYYTtB"
       >
         Você receberá:
       </h1>
       <hr
         class="sc-bdvvaa gnjgvW"
       />
-      <hr
-        class="sc-gsDJrp JzKSc"
+      <span
+        class="sc-dkPtyc bevlEB"
       />
+      <div
+        class="sc-gsDJrp drxnRB"
+      >
+        <p
+          class="sc-gKckTs gJDjXS"
+          data-testid="result-row"
+        >
+          <span>
+            Amanhã
+            :
+          </span>
+           
+          <br />
+          <span
+            class="sc-dkPtyc gQAEQm"
+          />
+          <em
+            class="sc-iCfLBT eXJSuG"
+          >
+            R$ 3.000,00
+          </em>
+        </p>
+        <span
+          class="sc-dkPtyc bevlEB"
+        />
+      </div>
+      <div
+        class="sc-gsDJrp drxnRB"
+      >
+        <p
+          class="sc-gKckTs gJDjXS"
+          data-testid="result-row"
+        >
+          <span>
+            Em 15 dias
+            :
+          </span>
+           
+          <br />
+          <span
+            class="sc-dkPtyc gQAEQm"
+          />
+          <em
+            class="sc-iCfLBT eXJSuG"
+          >
+            R$ 3.050,00
+          </em>
+        </p>
+        <span
+          class="sc-dkPtyc bevlEB"
+        />
+      </div>
+      <div
+        class="sc-gsDJrp drxnRB"
+      >
+        <p
+          class="sc-gKckTs gJDjXS"
+          data-testid="result-row"
+        >
+          <span>
+            Em 30 dias
+            :
+          </span>
+           
+          <br />
+          <span
+            class="sc-dkPtyc gQAEQm"
+          />
+          <em
+            class="sc-iCfLBT eXJSuG"
+          >
+            R$ 4.000,00
+          </em>
+        </p>
+        <span
+          class="sc-dkPtyc bevlEB"
+        />
+      </div>
+      <div
+        class="sc-gsDJrp drxnRB"
+      >
+        <p
+          class="sc-gKckTs gJDjXS"
+          data-testid="result-row"
+        >
+          <span>
+            Em 90 dias
+            :
+          </span>
+           
+          <br />
+          <span
+            class="sc-dkPtyc gQAEQm"
+          />
+          <em
+            class="sc-iCfLBT eXJSuG"
+          >
+            R$ 5.000,00
+          </em>
+        </p>
+        <span
+          class="sc-dkPtyc bevlEB"
+        />
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <h1
+      class="sc-eCImvq gYYTtB"
+    >
+      Você receberá:
+    </h1>
+    <hr
+      class="sc-bdvvaa gnjgvW"
+    />
+    <span
+      class="sc-dkPtyc bevlEB"
+    />
+    <div
+      class="sc-gsDJrp drxnRB"
+    >
       <p
-        class="sc-jRQAMF jcTbXm"
+        class="sc-gKckTs gJDjXS"
         data-testid="result-row"
       >
         <span>
@@ -26,14 +147,24 @@ Object {
         </span>
          
         <br />
+        <span
+          class="sc-dkPtyc gQAEQm"
+        />
         <em
-          class="sc-gKckTs gRhrMD"
+          class="sc-iCfLBT eXJSuG"
         >
           R$ 3.000,00
         </em>
       </p>
+      <span
+        class="sc-dkPtyc bevlEB"
+      />
+    </div>
+    <div
+      class="sc-gsDJrp drxnRB"
+    >
       <p
-        class="sc-jRQAMF jcTbXm"
+        class="sc-gKckTs gJDjXS"
         data-testid="result-row"
       >
         <span>
@@ -42,14 +173,24 @@ Object {
         </span>
          
         <br />
+        <span
+          class="sc-dkPtyc gQAEQm"
+        />
         <em
-          class="sc-gKckTs gRhrMD"
+          class="sc-iCfLBT eXJSuG"
         >
           R$ 3.050,00
         </em>
       </p>
+      <span
+        class="sc-dkPtyc bevlEB"
+      />
+    </div>
+    <div
+      class="sc-gsDJrp drxnRB"
+    >
       <p
-        class="sc-jRQAMF jcTbXm"
+        class="sc-gKckTs gJDjXS"
         data-testid="result-row"
       >
         <span>
@@ -58,14 +199,24 @@ Object {
         </span>
          
         <br />
+        <span
+          class="sc-dkPtyc gQAEQm"
+        />
         <em
-          class="sc-gKckTs gRhrMD"
+          class="sc-iCfLBT eXJSuG"
         >
           R$ 4.000,00
         </em>
       </p>
+      <span
+        class="sc-dkPtyc bevlEB"
+      />
+    </div>
+    <div
+      class="sc-gsDJrp drxnRB"
+    >
       <p
-        class="sc-jRQAMF jcTbXm"
+        class="sc-gKckTs gJDjXS"
         data-testid="result-row"
       >
         <span>
@@ -74,90 +225,19 @@ Object {
         </span>
          
         <br />
+        <span
+          class="sc-dkPtyc gQAEQm"
+        />
         <em
-          class="sc-gKckTs gRhrMD"
+          class="sc-iCfLBT eXJSuG"
         >
           R$ 5.000,00
         </em>
       </p>
+      <span
+        class="sc-dkPtyc bevlEB"
+      />
     </div>
-  </body>,
-  "container": <div>
-    <h1
-      class="sc-hKwCoD gjxRVc"
-    >
-      Você receberá:
-    </h1>
-    <hr
-      class="sc-bdvvaa gnjgvW"
-    />
-    <hr
-      class="sc-gsDJrp JzKSc"
-    />
-    <p
-      class="sc-jRQAMF jcTbXm"
-      data-testid="result-row"
-    >
-      <span>
-        Amanhã
-        :
-      </span>
-       
-      <br />
-      <em
-        class="sc-gKckTs gRhrMD"
-      >
-        R$ 3.000,00
-      </em>
-    </p>
-    <p
-      class="sc-jRQAMF jcTbXm"
-      data-testid="result-row"
-    >
-      <span>
-        Em 15 dias
-        :
-      </span>
-       
-      <br />
-      <em
-        class="sc-gKckTs gRhrMD"
-      >
-        R$ 3.050,00
-      </em>
-    </p>
-    <p
-      class="sc-jRQAMF jcTbXm"
-      data-testid="result-row"
-    >
-      <span>
-        Em 30 dias
-        :
-      </span>
-       
-      <br />
-      <em
-        class="sc-gKckTs gRhrMD"
-      >
-        R$ 4.000,00
-      </em>
-    </p>
-    <p
-      class="sc-jRQAMF jcTbXm"
-      data-testid="result-row"
-    >
-      <span>
-        Em 90 dias
-        :
-      </span>
-       
-      <br />
-      <em
-        class="sc-gKckTs gRhrMD"
-      >
-        R$ 5.000,00
-      </em>
-    </p>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

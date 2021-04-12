@@ -9,9 +9,12 @@ const mapSpacesToPixels = {
   big: 30,
   huge: 40,
 }
-export const VerticalSpacer = styled.hr.attrs((props: VerticalSpacerProps) => ({
-  size: props.size || 'normal',
-}))`
+export const VerticalSpacer = styled.span.attrs(
+  (props: VerticalSpacerProps) => ({
+    size: props.size || 'normal',
+  }),
+)`
   border: 0px solid;
   margin-bottom: ${props => mapSpacesToPixels[props.size]}px;
+  display: block;
 `

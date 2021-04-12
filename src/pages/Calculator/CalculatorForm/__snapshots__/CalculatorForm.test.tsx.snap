@@ -9,7 +9,7 @@ Object {
         class="sc-gsDJrp"
       >
         <label
-          class="sc-eCImvq iMeBec"
+          class="sc-eCImvq bcHqYm"
           for="Informe o valor da renda field"
         >
           Informe o valor da renda
@@ -17,17 +17,17 @@ Object {
           *
         </label>
         <input
-          class="sc-hKwCoD fWjqww"
+          class="sc-hKwCoD dNTHfn"
           id="Informe o valor da renda field"
           required=""
           type="text"
           value="R$ 1.000,00"
         />
-        <hr
-          class="sc-dkPtyc icWbJV"
+        <span
+          class="sc-dkPtyc bevlEB"
         />
         <label
-          class="sc-eCImvq iMeBec"
+          class="sc-eCImvq bcHqYm"
           for="Em quantas parcelas field"
         >
           Em quantas parcelas
@@ -35,7 +35,7 @@ Object {
           *
         </label>
         <input
-          class="sc-hKwCoD fWjqww"
+          class="sc-hKwCoD dNTHfn"
           id="Em quantas parcelas field"
           max="12"
           min="1"
@@ -48,11 +48,11 @@ Object {
         >
           Máximo de 12 parcelas
         </div>
-        <hr
-          class="sc-dkPtyc icWbJV"
+        <span
+          class="sc-dkPtyc bevlEB"
         />
         <label
-          class="sc-eCImvq iMeBec"
+          class="sc-eCImvq bcHqYm"
           for="Informe o percentual de MDR field"
         >
           Informe o percentual de MDR
@@ -60,18 +60,18 @@ Object {
           *
         </label>
         <input
-          class="sc-hKwCoD fWjqww"
+          class="sc-hKwCoD dNTHfn"
           id="Informe o percentual de MDR field"
           min="0"
           required=""
           type="number"
           value="1"
         />
-        <hr
-          class="sc-dkPtyc icWbJV"
+        <span
+          class="sc-dkPtyc bevlEB"
         />
         <button
-          class="sc-bdvvaa ihLWWn"
+          class="sc-bdvvaa bjJSUn"
         >
           Consultar
         </button>
@@ -83,7 +83,7 @@ Object {
       class="sc-gsDJrp"
     >
       <label
-        class="sc-eCImvq iMeBec"
+        class="sc-eCImvq bcHqYm"
         for="Informe o valor da renda field"
       >
         Informe o valor da renda
@@ -91,17 +91,17 @@ Object {
         *
       </label>
       <input
-        class="sc-hKwCoD fWjqww"
+        class="sc-hKwCoD dNTHfn"
         id="Informe o valor da renda field"
         required=""
         type="text"
         value="R$ 1.000,00"
       />
-      <hr
-        class="sc-dkPtyc icWbJV"
+      <span
+        class="sc-dkPtyc bevlEB"
       />
       <label
-        class="sc-eCImvq iMeBec"
+        class="sc-eCImvq bcHqYm"
         for="Em quantas parcelas field"
       >
         Em quantas parcelas
@@ -109,7 +109,7 @@ Object {
         *
       </label>
       <input
-        class="sc-hKwCoD fWjqww"
+        class="sc-hKwCoD dNTHfn"
         id="Em quantas parcelas field"
         max="12"
         min="1"
@@ -122,11 +122,11 @@ Object {
       >
         Máximo de 12 parcelas
       </div>
-      <hr
-        class="sc-dkPtyc icWbJV"
+      <span
+        class="sc-dkPtyc bevlEB"
       />
       <label
-        class="sc-eCImvq iMeBec"
+        class="sc-eCImvq bcHqYm"
         for="Informe o percentual de MDR field"
       >
         Informe o percentual de MDR
@@ -134,18 +134,18 @@ Object {
         *
       </label>
       <input
-        class="sc-hKwCoD fWjqww"
+        class="sc-hKwCoD dNTHfn"
         id="Informe o percentual de MDR field"
         min="0"
         required=""
         type="number"
         value="1"
       />
-      <hr
-        class="sc-dkPtyc icWbJV"
+      <span
+        class="sc-dkPtyc bevlEB"
       />
       <button
-        class="sc-bdvvaa ihLWWn"
+        class="sc-bdvvaa bjJSUn"
       >
         Consultar
       </button>

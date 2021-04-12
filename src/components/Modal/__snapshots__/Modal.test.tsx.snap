@@ -6,17 +6,17 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-gKckTs dTHjqa"
+        class="sc-gKckTs fAZrmo"
       >
         <div
-          class="sc-iCfLBT dFKqer"
+          class="sc-iCfLBT bzdGJp"
         >
           <img
-            class="sc-pVTma cYWuZQ"
+            class="sc-pVTma fpCxsv"
             src="images/header.jpg"
           />
           <div
-            class="sc-furvIG gqRxPo"
+            class="sc-furvIG fSdGQK"
           >
             <h1
               class="sc-dkPtyc cjJKLj"
@@ -24,17 +24,20 @@ Object {
             >
               Basic title
             </h1>
+            <span
+              class="sc-gsDJrp gvaAwY"
+            />
             <p
               class="sc-eCImvq dQlTUo"
               data-testid="modal-content"
             >
               Basic content
             </p>
-            <hr
-              class="sc-gsDJrp OAImd"
+            <span
+              class="sc-gsDJrp jEEgNF"
             />
             <button
-              class="sc-bdvvaa ihLWWn"
+              class="sc-bdvvaa bjJSUn"
             >
               OK, close
             </button>
@@ -45,17 +48,17 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-gKckTs dTHjqa"
+      class="sc-gKckTs fAZrmo"
     >
       <div
-        class="sc-iCfLBT dFKqer"
+        class="sc-iCfLBT bzdGJp"
       >
         <img
-          class="sc-pVTma cYWuZQ"
+          class="sc-pVTma fpCxsv"
           src="images/header.jpg"
         />
         <div
-          class="sc-furvIG gqRxPo"
+          class="sc-furvIG fSdGQK"
         >
           <h1
             class="sc-dkPtyc cjJKLj"
@@ -63,17 +66,20 @@ Object {
           >
             Basic title
           </h1>
+          <span
+            class="sc-gsDJrp gvaAwY"
+          />
           <p
             class="sc-eCImvq dQlTUo"
             data-testid="modal-content"
           >
             Basic content
           </p>
-          <hr
-            class="sc-gsDJrp OAImd"
+          <span
+            class="sc-gsDJrp jEEgNF"
           />
           <button
-            class="sc-bdvvaa ihLWWn"
+            class="sc-bdvvaa bjJSUn"
           >
             OK, close
           </button>

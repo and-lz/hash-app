@@ -8,29 +8,260 @@ Object {
   >
     <div>
       <div
-        class="sc-bqiQRQ gUKjqK"
+        class="sc-ksdxAp gMeoII"
       >
         <div
-          class="sc-eCImvq leqJFt"
+          class="sc-bdvvaa bFvfML"
         />
         <div
-          class="sc-bdvvaa bLLKTH"
+          class="sc-kDThTU itVAxa"
           width="608px"
         >
           <div
-            class="sc-gsDJrp sc-dkPtyc iwfwsZ bOpavx"
+            class="sc-iqsfdx sc-crHlIS ggZfCs cMOajr"
             width="377px"
           >
             <h1
-              class="sc-iCfLBT bcmRek"
+              class="sc-hKwCoD kUMuyG"
             >
               Simule sua antecipação
             </h1>
+            <span
+              class="sc-dkPtyc bevlEB"
+            />
+            <div
+              class="sc-bqiQRQ dDdDkw"
+              width="251px"
+            >
+              <form
+                class="sc-hBURRC"
+              >
+                <label
+                  class="sc-fFehDp giHfmi"
+                  for="Informe o valor da renda field"
+                >
+                  Informe o valor da renda
+                   
+                  *
+                </label>
+                <input
+                  class="sc-fotPbf imflpy"
+                  id="Informe o valor da renda field"
+                  required=""
+                  type="text"
+                  value="R$ 1.000,00"
+                />
+                <span
+                  class="sc-dkPtyc bevlEB"
+                />
+                <label
+                  class="sc-fFehDp giHfmi"
+                  for="Em quantas parcelas field"
+                >
+                  Em quantas parcelas
+                   
+                  *
+                </label>
+                <input
+                  class="sc-fotPbf imflpy"
+                  id="Em quantas parcelas field"
+                  max="12"
+                  min="1"
+                  required=""
+                  type="number"
+                  value="12"
+                />
+                <div
+                  class="sc-bkkfTU khHAZG"
+                >
+                  Máximo de 12 parcelas
+                </div>
+                <span
+                  class="sc-dkPtyc bevlEB"
+                />
+                <label
+                  class="sc-fFehDp giHfmi"
+                  for="Informe o percentual de MDR field"
+                >
+                  Informe o percentual de MDR
+                   
+                  *
+                </label>
+                <input
+                  class="sc-fotPbf imflpy"
+                  id="Informe o percentual de MDR field"
+                  min="0"
+                  required=""
+                  type="number"
+                  value="1"
+                />
+                <span
+                  class="sc-dkPtyc bevlEB"
+                />
+                <button
+                  class="sc-gsDJrp cUUmJF"
+                >
+                  Consultar
+                </button>
+              </form>
+            </div>
+          </div>
+          <div
+            class="sc-iqsfdx sc-egiSv fWoJPT jWOtts"
+            width="231px"
+          >
+            <h1
+              class="sc-eCImvq gYYTtB"
+            >
+              Você receberá:
+            </h1>
+            <hr
+              class="sc-ieebsP bWUoIY"
+            />
+            <span
+              class="sc-dkPtyc bevlEB"
+            />
+            <div
+              class="sc-dJjZJu gFEdfQ"
+            >
+              <p
+                class="sc-gKckTs gJDjXS"
+                data-testid="result-row"
+              >
+                <span>
+                  Amanhã
+                  :
+                </span>
+                 
+                <br />
+                <span
+                  class="sc-dkPtyc gQAEQm"
+                />
+                <em
+                  class="sc-hGPAah eHlsub"
+                >
+                  R$ 0,00
+                </em>
+              </p>
+              <span
+                class="sc-dkPtyc bevlEB"
+              />
+            </div>
+            <div
+              class="sc-dJjZJu gFEdfQ"
+            >
+              <p
+                class="sc-gKckTs gJDjXS"
+                data-testid="result-row"
+              >
+                <span>
+                  Em 15 dias
+                  :
+                </span>
+                 
+                <br />
+                <span
+                  class="sc-dkPtyc gQAEQm"
+                />
+                <em
+                  class="sc-hGPAah eHlsub"
+                >
+                  R$ 0,00
+                </em>
+              </p>
+              <span
+                class="sc-dkPtyc bevlEB"
+              />
+            </div>
+            <div
+              class="sc-dJjZJu gFEdfQ"
+            >
+              <p
+                class="sc-gKckTs gJDjXS"
+                data-testid="result-row"
+              >
+                <span>
+                  Em 30 dias
+                  :
+                </span>
+                 
+                <br />
+                <span
+                  class="sc-dkPtyc gQAEQm"
+                />
+                <em
+                  class="sc-hGPAah eHlsub"
+                >
+                  R$ 0,00
+                </em>
+              </p>
+              <span
+                class="sc-dkPtyc bevlEB"
+              />
+            </div>
+            <div
+              class="sc-dJjZJu gFEdfQ"
+            >
+              <p
+                class="sc-gKckTs gJDjXS"
+                data-testid="result-row"
+              >
+                <span>
+                  Em 90 dias
+                  :
+                </span>
+                 
+                <br />
+                <span
+                  class="sc-dkPtyc gQAEQm"
+                />
+                <em
+                  class="sc-hGPAah eHlsub"
+                >
+                  R$ 0,00
+                </em>
+              </p>
+              <span
+                class="sc-dkPtyc bevlEB"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="sc-ksdxAp gMeoII"
+    >
+      <div
+        class="sc-bdvvaa bFvfML"
+      />
+      <div
+        class="sc-kDThTU itVAxa"
+        width="608px"
+      >
+        <div
+          class="sc-iqsfdx sc-crHlIS ggZfCs cMOajr"
+          width="377px"
+        >
+          <h1
+            class="sc-hKwCoD kUMuyG"
+          >
+            Simule sua antecipação
+          </h1>
+          <span
+            class="sc-dkPtyc bevlEB"
+          />
+          <div
+            class="sc-bqiQRQ dDdDkw"
+            width="251px"
+          >
             <form
-              class="sc-ksdxAp"
+              class="sc-hBURRC"
             >
               <label
-                class="sc-fotPbf dvHluU"
+                class="sc-fFehDp giHfmi"
                 for="Informe o valor da renda field"
               >
                 Informe o valor da renda
@@ -38,17 +269,17 @@ Object {
                 *
               </label>
               <input
-                class="sc-hBURRC lnopc"
+                class="sc-fotPbf imflpy"
                 id="Informe o valor da renda field"
                 required=""
                 type="text"
                 value="R$ 1.000,00"
               />
-              <hr
-                class="sc-gKckTs eAcrHf"
+              <span
+                class="sc-dkPtyc bevlEB"
               />
               <label
-                class="sc-fotPbf dvHluU"
+                class="sc-fFehDp giHfmi"
                 for="Em quantas parcelas field"
               >
                 Em quantas parcelas
@@ -56,7 +287,7 @@ Object {
                 *
               </label>
               <input
-                class="sc-hBURRC lnopc"
+                class="sc-fotPbf imflpy"
                 id="Em quantas parcelas field"
                 max="12"
                 min="1"
@@ -65,15 +296,15 @@ Object {
                 value="12"
               />
               <div
-                class="sc-fFehDp dFwIzm"
+                class="sc-bkkfTU khHAZG"
               >
                 Máximo de 12 parcelas
               </div>
-              <hr
-                class="sc-gKckTs eAcrHf"
+              <span
+                class="sc-dkPtyc bevlEB"
               />
               <label
-                class="sc-fotPbf dvHluU"
+                class="sc-fFehDp giHfmi"
                 for="Informe o percentual de MDR field"
               >
                 Informe o percentual de MDR
@@ -81,40 +312,44 @@ Object {
                 *
               </label>
               <input
-                class="sc-hBURRC lnopc"
+                class="sc-fotPbf imflpy"
                 id="Informe o percentual de MDR field"
                 min="0"
                 required=""
                 type="number"
                 value="1"
               />
-              <hr
-                class="sc-gKckTs eAcrHf"
+              <span
+                class="sc-dkPtyc bevlEB"
               />
               <button
-                class="sc-jRQAMF cAVkxC"
+                class="sc-gsDJrp cUUmJF"
               >
                 Consultar
               </button>
             </form>
           </div>
-          <div
-            class="sc-gsDJrp sc-hKwCoD ilwAKO ebnkeC"
-            width="231px"
+        </div>
+        <div
+          class="sc-iqsfdx sc-egiSv fWoJPT jWOtts"
+          width="231px"
+        >
+          <h1
+            class="sc-eCImvq gYYTtB"
           >
-            <h1
-              class="sc-furvIG gLAzh"
-            >
-              Você receberá:
-            </h1>
-            <hr
-              class="sc-bkkfTU gPBuuN"
-            />
-            <hr
-              class="sc-gKckTs eAcrHf"
-            />
+            Você receberá:
+          </h1>
+          <hr
+            class="sc-ieebsP bWUoIY"
+          />
+          <span
+            class="sc-dkPtyc bevlEB"
+          />
+          <div
+            class="sc-dJjZJu gFEdfQ"
+          >
             <p
-              class="sc-jrQzUz eCwHXR"
+              class="sc-gKckTs gJDjXS"
               data-testid="result-row"
             >
               <span>
@@ -123,14 +358,24 @@ Object {
               </span>
                
               <br />
+              <span
+                class="sc-dkPtyc gQAEQm"
+              />
               <em
-                class="sc-ieebsP kRvHZI"
+                class="sc-hGPAah eHlsub"
               >
                 R$ 0,00
               </em>
             </p>
+            <span
+              class="sc-dkPtyc bevlEB"
+            />
+          </div>
+          <div
+            class="sc-dJjZJu gFEdfQ"
+          >
             <p
-              class="sc-jrQzUz eCwHXR"
+              class="sc-gKckTs gJDjXS"
               data-testid="result-row"
             >
               <span>
@@ -139,14 +384,24 @@ Object {
               </span>
                
               <br />
+              <span
+                class="sc-dkPtyc gQAEQm"
+              />
               <em
-                class="sc-ieebsP kRvHZI"
+                class="sc-hGPAah eHlsub"
               >
                 R$ 0,00
               </em>
             </p>
+            <span
+              class="sc-dkPtyc bevlEB"
+            />
+          </div>
+          <div
+            class="sc-dJjZJu gFEdfQ"
+          >
             <p
-              class="sc-jrQzUz eCwHXR"
+              class="sc-gKckTs gJDjXS"
               data-testid="result-row"
             >
               <span>
@@ -155,14 +410,24 @@ Object {
               </span>
                
               <br />
+              <span
+                class="sc-dkPtyc gQAEQm"
+              />
               <em
-                class="sc-ieebsP kRvHZI"
+                class="sc-hGPAah eHlsub"
               >
                 R$ 0,00
               </em>
             </p>
+            <span
+              class="sc-dkPtyc bevlEB"
+            />
+          </div>
+          <div
+            class="sc-dJjZJu gFEdfQ"
+          >
             <p
-              class="sc-jrQzUz eCwHXR"
+              class="sc-gKckTs gJDjXS"
               data-testid="result-row"
             >
               <span>
@@ -171,188 +436,19 @@ Object {
               </span>
                
               <br />
+              <span
+                class="sc-dkPtyc gQAEQm"
+              />
               <em
-                class="sc-ieebsP kRvHZI"
+                class="sc-hGPAah eHlsub"
               >
                 R$ 0,00
               </em>
             </p>
+            <span
+              class="sc-dkPtyc bevlEB"
+            />
           </div>
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="sc-bqiQRQ gUKjqK"
-    >
-      <div
-        class="sc-eCImvq leqJFt"
-      />
-      <div
-        class="sc-bdvvaa bLLKTH"
-        width="608px"
-      >
-        <div
-          class="sc-gsDJrp sc-dkPtyc iwfwsZ bOpavx"
-          width="377px"
-        >
-          <h1
-            class="sc-iCfLBT bcmRek"
-          >
-            Simule sua antecipação
-          </h1>
-          <form
-            class="sc-ksdxAp"
-          >
-            <label
-              class="sc-fotPbf dvHluU"
-              for="Informe o valor da renda field"
-            >
-              Informe o valor da renda
-               
-              *
-            </label>
-            <input
-              class="sc-hBURRC lnopc"
-              id="Informe o valor da renda field"
-              required=""
-              type="text"
-              value="R$ 1.000,00"
-            />
-            <hr
-              class="sc-gKckTs eAcrHf"
-            />
-            <label
-              class="sc-fotPbf dvHluU"
-              for="Em quantas parcelas field"
-            >
-              Em quantas parcelas
-               
-              *
-            </label>
-            <input
-              class="sc-hBURRC lnopc"
-              id="Em quantas parcelas field"
-              max="12"
-              min="1"
-              required=""
-              type="number"
-              value="12"
-            />
-            <div
-              class="sc-fFehDp dFwIzm"
-            >
-              Máximo de 12 parcelas
-            </div>
-            <hr
-              class="sc-gKckTs eAcrHf"
-            />
-            <label
-              class="sc-fotPbf dvHluU"
-              for="Informe o percentual de MDR field"
-            >
-              Informe o percentual de MDR
-               
-              *
-            </label>
-            <input
-              class="sc-hBURRC lnopc"
-              id="Informe o percentual de MDR field"
-              min="0"
-              required=""
-              type="number"
-              value="1"
-            />
-            <hr
-              class="sc-gKckTs eAcrHf"
-            />
-            <button
-              class="sc-jRQAMF cAVkxC"
-            >
-              Consultar
-            </button>
-          </form>
-        </div>
-        <div
-          class="sc-gsDJrp sc-hKwCoD ilwAKO ebnkeC"
-          width="231px"
-        >
-          <h1
-            class="sc-furvIG gLAzh"
-          >
-            Você receberá:
-          </h1>
-          <hr
-            class="sc-bkkfTU gPBuuN"
-          />
-          <hr
-            class="sc-gKckTs eAcrHf"
-          />
-          <p
-            class="sc-jrQzUz eCwHXR"
-            data-testid="result-row"
-          >
-            <span>
-              Amanhã
-              :
-            </span>
-             
-            <br />
-            <em
-              class="sc-ieebsP kRvHZI"
-            >
-              R$ 0,00
-            </em>
-          </p>
-          <p
-            class="sc-jrQzUz eCwHXR"
-            data-testid="result-row"
-          >
-            <span>
-              Em 15 dias
-              :
-            </span>
-             
-            <br />
-            <em
-              class="sc-ieebsP kRvHZI"
-            >
-              R$ 0,00
-            </em>
-          </p>
-          <p
-            class="sc-jrQzUz eCwHXR"
-            data-testid="result-row"
-          >
-            <span>
-              Em 30 dias
-              :
-            </span>
-             
-            <br />
-            <em
-              class="sc-ieebsP kRvHZI"
-            >
-              R$ 0,00
-            </em>
-          </p>
-          <p
-            class="sc-jrQzUz eCwHXR"
-            data-testid="result-row"
-          >
-            <span>
-              Em 90 dias
-              :
-            </span>
-             
-            <br />
-            <em
-              class="sc-ieebsP kRvHZI"
-            >
-              R$ 0,00
-            </em>
-          </p>
         </div>
       </div>
     </div>

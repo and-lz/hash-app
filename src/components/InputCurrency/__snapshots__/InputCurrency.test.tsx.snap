@@ -6,14 +6,14 @@ Object {
   "baseElement": <body>
     <div>
       <label
-        class="sc-gsDJrp eLRdNd"
+        class="sc-gsDJrp hULoMr"
         for="Basic Input field"
       >
         Basic Input
          
       </label>
       <input
-        class="sc-bdvvaa iEigXa"
+        class="sc-bdvvaa euXszh"
         id="Basic Input field"
         type="text"
         value="R$ 0,00"
@@ -22,14 +22,14 @@ Object {
   </body>,
   "container": <div>
     <label
-      class="sc-gsDJrp eLRdNd"
+      class="sc-gsDJrp hULoMr"
       for="Basic Input field"
     >
       Basic Input
        
     </label>
     <input
-      class="sc-bdvvaa iEigXa"
+      class="sc-bdvvaa euXszh"
       id="Basic Input field"
       type="text"
       value="R$ 0,00"

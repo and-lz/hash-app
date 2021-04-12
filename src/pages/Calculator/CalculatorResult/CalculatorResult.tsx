@@ -21,16 +21,14 @@ function CalculatorResult({ days, data, animate }: ResultProps) {
       <Divider />
       <VerticalSpacer size="normal" />
       {days.map((day: number, index: number) => (
-        <>
-          <SlideInUp animate={animate} delay={100 * index}>
-            <HighlightText data-testid="result-row" key={day}>
-              <span>{getFriendlyDayName(day)}:</span> <br />
-              <VerticalSpacer size="tiny" />
-              <Bold>{formatToCurrency(data[day])}</Bold>
-            </HighlightText>
-            <VerticalSpacer />
-          </SlideInUp>
-        </>
+        <SlideInUp animate={animate} delay={100 * index} key={day}>
+          <HighlightText data-testid="result-row">
+            <span>{getFriendlyDayName(day)}:</span> <br />
+            <VerticalSpacer size="tiny" />
+            <Bold>{formatToCurrency(data[day])}</Bold>
+          </HighlightText>
+          <VerticalSpacer />
+        </SlideInUp>
       ))}
     </>
   )
