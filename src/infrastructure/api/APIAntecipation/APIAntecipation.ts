@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios'
 import api from '../api'
 
-const URL = 'https://frontend-challenge-7bu3nxh76a-uc.a.run.app?timeout'
+const URL = 'https://frontend-challenge-7bu3nxh76a-uc.a.run.app'
 
 interface APIAntecipationProps {
   amount: number | string
