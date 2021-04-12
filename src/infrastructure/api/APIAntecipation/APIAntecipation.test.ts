@@ -12,7 +12,7 @@ describe('APIAntecipation', () => {
     days: [30, 60, 90],
   }
 
-  const config = { timeout: 5000 }
+  const config = { timeout: 10000 }
 
   const paramsWithWrongTypes = {
     amount: '2000',
