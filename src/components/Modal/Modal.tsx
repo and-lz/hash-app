@@ -1,9 +1,9 @@
 import Button from 'components/Button/Button'
-import { Spacer } from 'design-system/Spaces/Spaces'
+import { VerticalSpacer } from 'design-system/Spaces/Spaces'
 import { Heading1 } from 'design-system/Typography/Headings'
 import { Text } from 'design-system/Typography/Paragraph'
 import React, { useEffect, useState } from 'react'
-import { Modal as ModalBox, ModalBackground } from 'design-system/Modal/Modal'
+import { ModalBox, ModalBackground } from 'design-system/Modal/Modal'
 
 interface ModalProps {
   title: string
@@ -33,7 +33,7 @@ function Modal({
         <ModalBox>
           <Heading1 data-testid="modal-title">{title}</Heading1>
           <Text data-testid="modal-content">{content}</Text>
-          <Spacer size="big" />
+          <VerticalSpacer size="big" />
           <Button
             label={action}
             onClick={() => {

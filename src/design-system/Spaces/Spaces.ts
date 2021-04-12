@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-interface SpacerProps {
+interface VerticalSpacerProps {
   size: 'tiny' | 'normal' | 'big' | 'huge'
 }
 const mapSpacesToPixels = {
@@ -9,7 +9,7 @@ const mapSpacesToPixels = {
   big: 30,
   huge: 40,
 }
-export const Spacer = styled.hr.attrs((props: SpacerProps) => ({
+export const VerticalSpacer = styled.hr.attrs((props: VerticalSpacerProps) => ({
   size: props.size || 'normal',
 }))`
   border: 0px solid;

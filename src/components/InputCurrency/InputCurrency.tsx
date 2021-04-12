@@ -1,8 +1,5 @@
-import { InputField } from 'design-system/Form/Input/Input.styles'
-import {
-  FormLabel,
-  FormLabelAddOn,
-} from 'design-system/Form/Label/Label.styles'
+import { InputField } from 'design-system/Form/Input/Input'
+import { FormLabel, FormLabelAddOn } from 'design-system/Form/Label/Label'
 import { formatToCurrency } from 'infrastructure/currency/currency'
 import React, { useRef, useState } from 'react'
 

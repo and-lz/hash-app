@@ -1,8 +1,5 @@
-import { InputField } from 'design-system/Form/Input/Input.styles'
-import {
-  FormLabel,
-  FormLabelAddOn,
-} from 'design-system/Form/Label/Label.styles'
+import { InputField } from 'design-system/Form/Input/Input'
+import { FormLabel, FormLabelAddOn } from 'design-system/Form/Label/Label'
 import React from 'react'
 
 interface InputProps {

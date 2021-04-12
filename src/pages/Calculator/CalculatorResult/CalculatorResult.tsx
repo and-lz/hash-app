@@ -1,5 +1,5 @@
 import { Divider } from 'design-system/Divider/Divider'
-import { Spacer } from 'design-system/Spaces/Spaces'
+import { VerticalSpacer } from 'design-system/Spaces/Spaces'
 import { Heading2 } from 'design-system/Typography/Headings'
 import { HighlightText } from 'design-system/Typography/Paragraph'
 import { Bold } from 'design-system/Typography/Styles'
@@ -17,7 +17,7 @@ function CalculatorResult({ days, data }: ResultProps) {
     <>
       <Heading2>Você receberá:</Heading2>
       <Divider />
-      <Spacer size="normal" />
+      <VerticalSpacer size="normal" />
       {days.map((day: number) => (
         <HighlightText data-testid="result-row" key={day}>
           <span data-testid="day">{getFriendlyDayName(day)}:</span> <br />

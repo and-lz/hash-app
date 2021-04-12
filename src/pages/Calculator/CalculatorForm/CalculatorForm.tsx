@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import Button from 'components/Button/Button'
 import { Form } from 'design-system/Form/Form'
-import { Spacer } from 'design-system/Spaces/Spaces'
+import { VerticalSpacer } from 'design-system/Spaces/Spaces'
 import Input from 'components/Input/Input'
 import InputCurrency from 'components/InputCurrency/InputCurrency'
 
@@ -39,7 +39,7 @@ function CalculatorForm({ onSubmit }: CalculadoraFormProps) {
         max={100000000}
         data-testid="amount field"
       />
-      <Spacer />
+      <VerticalSpacer />
       <Input
         onChange={(value: number) => setInstallments(value)}
         required
@@ -50,7 +50,7 @@ function CalculatorForm({ onSubmit }: CalculadoraFormProps) {
         min={1}
         max={12}
       />
-      <Spacer />
+      <VerticalSpacer />
       <Input
         onChange={(value: number) => setMdr(value)}
         required
@@ -59,7 +59,7 @@ function CalculatorForm({ onSubmit }: CalculadoraFormProps) {
         type="number"
         min={0}
       />
-      <Spacer />
+      <VerticalSpacer />
       <Button onClick={checkFormValidity} type="submit" label="Consultar" />
     </Form>
   )

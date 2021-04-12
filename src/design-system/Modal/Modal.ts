@@ -36,7 +36,7 @@ const slide = keyframes`
     opacity: 1;
   }
 `
-export const Modal = styled.div`
+export const ModalBox = styled.div`
   background-color: white;
   width: 380px;
   padding: 40px 50px;
