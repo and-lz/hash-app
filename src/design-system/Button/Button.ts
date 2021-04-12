@@ -7,7 +7,7 @@ interface FlatButtonProps {
 
 export const FlatButton = styled.button<FlatButtonProps>`
   border-radius: 999px;
-  background: #5d9cec;
+  background: ${DesignSystem.colors.cornflowerBlue};
   color: white;
   padding: 10px 60px;
   font-size: 16px;

@@ -17,12 +17,12 @@ export const ModalBackground = styled.div<ModalProps>`
   width: 100%;
   height: 100%;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
-  padding: 60px 100px 0;
+  padding: 20px;
   backdrop-filter: blur(5px);
-  align-items: center;
+  align-items: flex-end;
   animation: ${fadeIn} 250ms ease 1 forwards;
 `
 
@@ -39,9 +39,21 @@ const slide = keyframes`
 export const ModalBox = styled.div`
   background-color: white;
   width: 380px;
-  padding: 40px 50px;
   border-radius: 4px;
   overflow: auto;
   text-align: center;
+  border: 1px solid #d1dce3;
   animation: ${slide} 250ms ease 100ms 1 both;
+`
+
+export const ModalContent = styled.div`
+  padding: 20px 50px;
+`
+
+export const ModalImage = styled.img.attrs({
+  src: 'images/header.jpg',
+})`
+  width: 100%;
+  margin-bottom: 0px;
+  display: block;
 `
