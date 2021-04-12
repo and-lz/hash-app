@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import { Card, CardHighlight, CardMainContent } from 'design-system/Card/Card'
 import Loader from 'components/Loader/Loader'
 import Modal from 'components/Modal/Modal'
+import { Card, CardHighlight, CardMainContent } from 'design-system/Card/Card'
+import { Container } from 'design-system/Container/Container'
+import { VerticalSpacer } from 'design-system/Spaces/Spaces'
 import { Heading1 } from 'design-system/Typography/Headings'
 import APIAntecipation from 'infrastructure/api/APIAntecipation/APIAntecipation'
+import React, { useState } from 'react'
 import { mapDaysToInitialData } from './Calculator.helpers'
 import { Page } from './Calculator.styles'
 import CalculatorForm from './CalculatorForm/CalculatorForm'
 import CalculatorResult from './CalculatorResult/CalculatorResult'
-import { VerticalSpacer } from 'design-system/Spaces/Spaces'
-import { Container } from 'design-system/Container/Container'
-import { SlideInUp } from 'design-system/Motion/SlideUpIn'
 
 interface CalculatorPageProps {
   antecipationDays: number[]
