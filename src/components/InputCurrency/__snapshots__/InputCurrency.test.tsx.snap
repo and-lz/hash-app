@@ -16,6 +16,7 @@ Object {
         class="sc-bdvvaa iEigXa"
         data-testid="input-field"
         id="Basic Input field"
+        type="text"
         value="R$ 0,00"
       />
     </div>
@@ -32,6 +33,7 @@ Object {
       class="sc-bdvvaa iEigXa"
       data-testid="input-field"
       id="Basic Input field"
+      type="text"
       value="R$ 0,00"
     />
   </div>,

@@ -1,14 +1,14 @@
-import { InputField } from 'design-system/Form/Input/Input'
-import { FormLabel, FormLabelAddOn } from 'design-system/Form/Label/Label'
+import Input from 'components/Input/Input'
 import { formatToCurrency } from 'infrastructure/currency/currency'
 import React, { useRef, useState } from 'react'
+import { getOnlyNumbersFromInputValue } from './InputCurrency.rules'
 
 interface InputCurrencyProps {
   required?: boolean
   label: string
   addon?: string
   value?: number
-  onChange: Function
+  onChange?: Function
   placeholder?: 'string'
   min?: number
   max?: number
@@ -19,7 +19,7 @@ function InputCurrency({
   required,
   addon,
   value = 0,
-  onChange,
+  onChange = (value: any) => value,
   min,
   max,
 }: InputCurrencyProps) {
@@ -27,14 +27,14 @@ function InputCurrency({
   const [formattedValue, setFormmatedValue] = useState(formatToCurrency(value))
 
   function onChangeInternal() {
-    let onlyNumbers = getOnlyNumber(input)
+    let onlyNumbers = getOnlyNumbersFromInputValue(input)
     if (!onlyNumbers) return
     setFormmatedValue(formatToCurrency(onlyNumbers))
     onChange(onlyNumbers)
   }
 
   function onBlurInternal() {
-    let onlyNumbers = getOnlyNumber(input)
+    let onlyNumbers = getOnlyNumbersFromInputValue(input)
     if (!onlyNumbers) return
 
     if (min && onlyNumbers < min) onlyNumbers = min
@@ -44,29 +44,16 @@ function InputCurrency({
   }
 
   return (
-    <>
-      <FormLabel htmlFor={`${label} field`}>
-        {label} {required && '*'}
-      </FormLabel>
-      <InputField
-        // @ts-ignore
-        ref={input}
-        data-testid="input-field"
-        id={`${label} field`}
-        required={required}
-        onBlur={onBlurInternal}
-        value={formattedValue}
-        onChange={onChangeInternal}
-      />
-      {addon && <FormLabelAddOn>{addon}</FormLabelAddOn>}
-    </>
+    <Input
+      inputRef={input}
+      label={label}
+      required={required}
+      addon={addon}
+      value={formattedValue}
+      onChange={onChangeInternal}
+      onBlur={onBlurInternal}
+    />
   )
-}
-
-function getOnlyNumber(ref: { current: any }) {
-  if (!ref.current) return
-  let onlyNumbers = ref.current.value.replace(/\D+/g, '') / 100
-  return onlyNumbers
 }
 
 export default InputCurrency

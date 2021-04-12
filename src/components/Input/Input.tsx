@@ -1,5 +1,5 @@
 import { InputField } from 'design-system/Form/Input/Input'
-import { FormLabel, FormLabelAddOn } from 'design-system/Form/Label/Label'
+import { Addon, Label } from 'design-system/Form/Label/Label'
 import React from 'react'
 
 interface InputProps {
@@ -9,9 +9,11 @@ interface InputProps {
   addon?: string
   value?: string | number
   onChange?: Function
+  onBlur?: Function
   min?: number
   max?: number
   placeholder?: 'string'
+  inputRef?: any
 }
 
 function Input({
@@ -22,14 +24,17 @@ function Input({
   value,
   min,
   max,
+  inputRef = React.createRef(),
+  onBlur = (value: any) => value,
   onChange = (value: any) => value,
 }: InputProps) {
   return (
     <>
-      <FormLabel htmlFor={`${label} field`}>
+      <Label htmlFor={`${label} field`}>
         {label} {required && '*'}
-      </FormLabel>
+      </Label>
       <InputField
+        ref={inputRef}
         data-testid="input-field"
         id={`${label} field`}
         min={min}
@@ -37,9 +42,10 @@ function Input({
         required={required}
         value={value}
         onChange={e => onChange(e.currentTarget.value)}
+        onBlur={e => onBlur(e.currentTarget.value)}
         type={type}
       />
-      {addon && <FormLabelAddOn>{addon}</FormLabelAddOn>}
+      {addon && <Addon>{addon}</Addon>}
     </>
   )
 }

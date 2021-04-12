@@ -21,6 +21,7 @@ Object {
           data-testid="input-field"
           id="Informe o valor da renda field"
           required=""
+          type="text"
           value="R$ 1.000,00"
         />
         <hr
@@ -97,6 +98,7 @@ Object {
         data-testid="input-field"
         id="Informe o valor da renda field"
         required=""
+        type="text"
         value="R$ 1.000,00"
       />
       <hr

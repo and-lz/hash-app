@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import DesignSystem from 'design-system'
 
-export const FormLabel = styled.label`
+export const Label = styled.label`
   display: block;
   font-family: Source Sans Pro;
   font-style: normal;
@@ -11,7 +11,7 @@ export const FormLabel = styled.label`
   margin-bottom: 6px;
 `
 
-export const FormLabelAddOn = styled.div`
+export const Addon = styled.div`
   font-family: Source Sans Pro;
   font-style: normal;
   font-weight: bold;
