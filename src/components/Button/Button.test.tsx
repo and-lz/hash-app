@@ -1,4 +1,4 @@
-import { render, RenderResult } from '@testing-library/react'
+import { fireEvent, render, RenderResult } from '@testing-library/react'
 import React from 'react'
 import Button from './Button'
 
@@ -8,8 +8,10 @@ describe('<Button />', () => {
   let component: RenderResult
   let getByText: any
   let queryByText: any
+  let onClickMock: Function | undefined
   beforeEach(() => {
-    component = render(<Button label={label} />)
+    onClickMock = jest.fn()
+    component = render(<Button label={label} onClick={onClickMock} />)
     getByText = component.getByText
     queryByText = component.queryByText
   })
@@ -18,5 +20,14 @@ describe('<Button />', () => {
   })
   test('Should render button with correct label', () => {
     getByText(label)
+  })
+  test('Should call onClick callback when button is clicked', () => {
+    fireEvent.click(getByText(label))
+    expect(onClickMock).toBeCalledTimes(1)
+
+    fireEvent.click(getByText(label))
+    fireEvent.click(getByText(label))
+    fireEvent.click(getByText(label))
+    expect(onClickMock).toBeCalledTimes(4)
   })
 })
