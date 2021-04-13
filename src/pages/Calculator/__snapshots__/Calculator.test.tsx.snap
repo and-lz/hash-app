@@ -8,17 +8,17 @@ Object {
   >
     <div>
       <div
-        class="sc-ksdxAp hRwRjk"
+        class="sc-ksdxAp hPGHDP"
       >
         <div
           class="sc-bdvvaa ckPhbz"
         />
         <div
-          class="sc-kDThTU itVAxa"
+          class="sc-kDThTU dOQeWD"
           width="608px"
         >
           <div
-            class="sc-iqsfdx sc-crHlIS ggZfCs cMOajr"
+            class="sc-iqsfdx sc-crHlIS fEmQeI KZBNx"
             width="377px"
           >
             <h1
@@ -30,7 +30,7 @@ Object {
               class="sc-dkPtyc bevlEB"
             />
             <div
-              class="sc-bqiQRQ dDdDkw"
+              class="sc-bqiQRQ fZYwCN"
               width="251px"
             >
               <form
@@ -45,7 +45,7 @@ Object {
                   *
                 </label>
                 <input
-                  class="sc-fotPbf imflpy"
+                  class="sc-fotPbf dTrGGh"
                   id="Informe o valor da renda field"
                   required=""
                   type="text"
@@ -63,7 +63,7 @@ Object {
                   *
                 </label>
                 <input
-                  class="sc-fotPbf imflpy"
+                  class="sc-fotPbf dTrGGh"
                   id="Em quantas parcelas field"
                   max="12"
                   min="1"
@@ -88,7 +88,7 @@ Object {
                   *
                 </label>
                 <input
-                  class="sc-fotPbf imflpy"
+                  class="sc-fotPbf dTrGGh"
                   id="Informe o percentual de MDR field"
                   min="0"
                   required=""
@@ -107,7 +107,7 @@ Object {
             </div>
           </div>
           <div
-            class="sc-iqsfdx sc-egiSv fWoJPT jWOtts"
+            class="sc-iqsfdx sc-egiSv dvtCxf fPkldC"
             width="231px"
           >
             <h1
@@ -232,17 +232,17 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-ksdxAp hRwRjk"
+      class="sc-ksdxAp hPGHDP"
     >
       <div
         class="sc-bdvvaa ckPhbz"
       />
       <div
-        class="sc-kDThTU itVAxa"
+        class="sc-kDThTU dOQeWD"
         width="608px"
       >
         <div
-          class="sc-iqsfdx sc-crHlIS ggZfCs cMOajr"
+          class="sc-iqsfdx sc-crHlIS fEmQeI KZBNx"
           width="377px"
         >
           <h1
@@ -254,7 +254,7 @@ Object {
             class="sc-dkPtyc bevlEB"
           />
           <div
-            class="sc-bqiQRQ dDdDkw"
+            class="sc-bqiQRQ fZYwCN"
             width="251px"
           >
             <form
@@ -269,7 +269,7 @@ Object {
                 *
               </label>
               <input
-                class="sc-fotPbf imflpy"
+                class="sc-fotPbf dTrGGh"
                 id="Informe o valor da renda field"
                 required=""
                 type="text"
@@ -287,7 +287,7 @@ Object {
                 *
               </label>
               <input
-                class="sc-fotPbf imflpy"
+                class="sc-fotPbf dTrGGh"
                 id="Em quantas parcelas field"
                 max="12"
                 min="1"
@@ -312,7 +312,7 @@ Object {
                 *
               </label>
               <input
-                class="sc-fotPbf imflpy"
+                class="sc-fotPbf dTrGGh"
                 id="Informe o percentual de MDR field"
                 min="0"
                 required=""
@@ -331,7 +331,7 @@ Object {
           </div>
         </div>
         <div
-          class="sc-iqsfdx sc-egiSv fWoJPT jWOtts"
+          class="sc-iqsfdx sc-egiSv dvtCxf fPkldC"
           width="231px"
         >
           <h1
