@@ -1,6 +1,6 @@
 # Hash App
 
-Application to calculate antecipation values, based on an amount, installments and MDR.
+Application to calculate anticipation values, based on an amount, installments and MDR.
 
 It is possible to customize the days the application will calculate, passing props to the calulator page, in `src/index.ts`:
 

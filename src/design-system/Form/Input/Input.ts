@@ -13,6 +13,7 @@ export const InputField = styled.input`
   transition: all ${DesignSystem.motion.duration} ${DesignSystem.motion.easing};
   display: block;
   width: 100%;
+  appearance: none;
   @media (${DesignSystem.breakpoints.tablet}) {
     font-size: 14px;
   }

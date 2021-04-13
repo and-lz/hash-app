@@ -31,7 +31,7 @@ export const CardArea = styled.div<CardAreaProps>`
 `
 
 export const CardMainContent = styled(CardArea)`
-  padding: 20px 28px;
+  padding: 40px 28px 20px;
   @media (${DesignSystem.breakpoints.tablet}) {
     padding: 41px 56px;
   }
