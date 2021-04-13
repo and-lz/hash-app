@@ -18,7 +18,7 @@ Object {
           width="608px"
         >
           <div
-            class="sc-iqsfdx sc-crHlIS fEmQeI KZBNx"
+            class="sc-iqsfdx sc-crHlIS fEmQeI gDWTFd"
             width="377px"
           >
             <h1
@@ -45,7 +45,7 @@ Object {
                   *
                 </label>
                 <input
-                  class="sc-fotPbf dTrGGh"
+                  class="sc-fotPbf iKqKRC"
                   id="Informe o valor da renda field"
                   required=""
                   type="text"
@@ -63,7 +63,7 @@ Object {
                   *
                 </label>
                 <input
-                  class="sc-fotPbf dTrGGh"
+                  class="sc-fotPbf iKqKRC"
                   id="Em quantas parcelas field"
                   max="12"
                   min="1"
@@ -88,7 +88,7 @@ Object {
                   *
                 </label>
                 <input
-                  class="sc-fotPbf dTrGGh"
+                  class="sc-fotPbf iKqKRC"
                   id="Informe o percentual de MDR field"
                   min="0"
                   required=""
@@ -242,7 +242,7 @@ Object {
         width="608px"
       >
         <div
-          class="sc-iqsfdx sc-crHlIS fEmQeI KZBNx"
+          class="sc-iqsfdx sc-crHlIS fEmQeI gDWTFd"
           width="377px"
         >
           <h1
@@ -269,7 +269,7 @@ Object {
                 *
               </label>
               <input
-                class="sc-fotPbf dTrGGh"
+                class="sc-fotPbf iKqKRC"
                 id="Informe o valor da renda field"
                 required=""
                 type="text"
@@ -287,7 +287,7 @@ Object {
                 *
               </label>
               <input
-                class="sc-fotPbf dTrGGh"
+                class="sc-fotPbf iKqKRC"
                 id="Em quantas parcelas field"
                 max="12"
                 min="1"
@@ -312,7 +312,7 @@ Object {
                 *
               </label>
               <input
-                class="sc-fotPbf dTrGGh"
+                class="sc-fotPbf iKqKRC"
                 id="Informe o percentual de MDR field"
                 min="0"
                 required=""
