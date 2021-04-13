@@ -15,6 +15,8 @@ const fadeIn = keyframes`
 export const ModalBackground = styled.div<ModalProps>`
   position: absolute;
   width: 100%;
+  left: 0;
+  top: 0;
   height: 100%;
   z-index: 999;
   background: rgba(0, 0, 0, 0.1);
