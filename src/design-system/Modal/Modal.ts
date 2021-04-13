@@ -13,7 +13,7 @@ const fadeIn = keyframes`
   }
 `
 export const ModalBackground = styled.div<ModalProps>`
-  position: absolute;
+  position: fixed;
   width: 100%;
   left: 0;
   top: 0;

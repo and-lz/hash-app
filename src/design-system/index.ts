@@ -1,5 +1,6 @@
 import { colors } from './colors'
 import { duration, longDuration, easing } from './motion'
+import { breakpoints } from './breakpoints'
 
 const DS = {
   colors,
@@ -8,6 +9,7 @@ const DS = {
     duration,
     longDuration,
   },
+  breakpoints,
 }
 
 export default DS

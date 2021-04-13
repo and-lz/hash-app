@@ -6,5 +6,7 @@ export const Page = styled.div`
   display: grid;
   place-items: center;
   min-height: 100%;
-  padding: 100px;
+  @media (${DesignSystem.breakpoints.tablet}) {
+    padding: 20px;
+  }
 `
