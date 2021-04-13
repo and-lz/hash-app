@@ -8,14 +8,6 @@ It is possible to customize the days the application will calculate, passing pro
 <CalculatorPage antecipationDays={[1, 15, 30, 90]} />
 ```
 
-Application to calculate antecipation values, based on an amount, installments and MDR.
-
-It is possible to customize the days the application will calculate, passing props to the calulator page:
-
-```javascript
-<CalculatorPage antecipationDays={[1, 15, 30, 90]} />
-```
-
 ## Available Scripts
 
 In the project directory, you can run:
