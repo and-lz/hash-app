@@ -79,9 +79,9 @@ describe('<CalculatorPage />', () => {
     test('Should present antecipation values, after a successful request to the api', async () => {
       fillCalculatorFieldsWithValidValues()
 
-      // @ts-ignore
       mockedAPIAntecipation.mockResolvedValue({
         data: {
+          // @ts-ignore
           1: 2000,
           15: 4000,
           30: 6000,
