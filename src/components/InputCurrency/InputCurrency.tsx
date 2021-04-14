@@ -9,7 +9,7 @@ interface InputCurrencyProps {
   addon?: string
   value?: number
   onChange?: Function
-  placeholder?: 'string'
+  placeholder?: string
   min?: number
   max?: number
 }

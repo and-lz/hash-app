@@ -37,7 +37,6 @@ function CalculatorForm({ onSubmit }: CalculadoraFormProps) {
         value={amount}
         min={1000}
         max={100000000}
-        data-testid="amount field"
       />
       <VerticalSpacer />
       <Input
