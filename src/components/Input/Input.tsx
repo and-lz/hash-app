@@ -11,6 +11,7 @@ interface InputProps {
   onChange?: Function
   onBlur?: Function
   onClick?: Function
+  onFocus?: Function
   min?: number
   max?: number
   placeholder?: 'string'
@@ -39,6 +40,7 @@ function Input({
   onBlur = (value: any) => value,
   onChange = (value: any) => value,
   onClick = () => {},
+  onFocus = () => {},
   inputmode,
   autofocus,
 }: InputProps) {
@@ -55,7 +57,8 @@ function Input({
           value={value}
           onChange={e => onChange(e.currentTarget.value)}
           onBlur={e => onBlur(e.currentTarget.value)}
-          onClick={() => onClick()}
+          onClick={e => onClick(e)}
+          onFocus={e => onFocus(e)}
           type={type}
           inputMode={inputmode}
         />
