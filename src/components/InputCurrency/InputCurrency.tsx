@@ -26,6 +26,10 @@ function InputCurrency({
   const input = useRef<HTMLInputElement>()
   const [formattedValue, setFormmatedValue] = useState(formatToCurrency(value))
 
+  function onClick() {
+    input.current?.select()
+  }
+
   function onChangeInternal() {
     let onlyNumbers = getOnlyNumbersFromInputValue(input)
     if (!onlyNumbers) return
@@ -52,6 +56,7 @@ function InputCurrency({
       value={formattedValue}
       onChange={onChangeInternal}
       onBlur={onBlurInternal}
+      onClick={onClick}
     />
   )
 }

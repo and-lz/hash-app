@@ -10,6 +10,7 @@ interface InputProps {
   value?: string | number
   onChange?: Function
   onBlur?: Function
+  onClick?: Function
   min?: number
   max?: number
   placeholder?: 'string'
@@ -27,6 +28,7 @@ function Input({
   inputRef = React.createRef(),
   onBlur = (value: any) => value,
   onChange = (value: any) => value,
+  onClick = () => {},
 }: InputProps) {
   return (
     <>
@@ -42,6 +44,7 @@ function Input({
         value={value}
         onChange={e => onChange(e.currentTarget.value)}
         onBlur={e => onBlur(e.currentTarget.value)}
+        onClick={() => onClick()}
         type={type}
       />
       {addon && <Addon>{addon}</Addon>}
