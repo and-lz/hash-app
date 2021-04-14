@@ -4,10 +4,15 @@ import { FlatButton } from 'design-system/Button/Button'
 interface ButtonProps extends Partial<HTMLButtonElement> {
   label: string
   onClick?: Function
+  autofocus?: boolean
 }
 
-function Button({ label, onClick = () => {} }: ButtonProps) {
-  return <FlatButton onClick={() => onClick()}>{label}</FlatButton>
+function Button({ autofocus, label, onClick = () => {} }: ButtonProps) {
+  return (
+    <FlatButton autoFocus={autofocus} onClick={() => onClick()}>
+      {label}
+    </FlatButton>
+  )
 }
 
 export default Button
