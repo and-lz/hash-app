@@ -31,6 +31,7 @@ function CalculatorForm({ onSubmit }: CalculadoraFormProps) {
       }}
     >
       <InputCurrency
+        autofocus
         onChange={(value: number) => setAmount(value)}
         required
         label="Informe o valor da renda"

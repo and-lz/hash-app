@@ -15,6 +15,7 @@ interface InputProps {
   max?: number
   placeholder?: 'string'
   inputRef?: any
+  autofocus?: boolean
   inputmode?:
     | 'text'
     | 'none'
@@ -39,12 +40,14 @@ function Input({
   onChange = (value: any) => value,
   onClick = () => {},
   inputmode,
+  autofocus,
 }: InputProps) {
   return (
     <>
       <Label>
         {label} {required && '*'}
         <InputField
+          autoFocus={autofocus}
           ref={inputRef}
           min={min}
           max={max}

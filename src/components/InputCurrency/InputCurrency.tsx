@@ -12,6 +12,7 @@ interface InputCurrencyProps {
   placeholder?: string
   min?: number
   max?: number
+  autofocus?: boolean
 }
 
 function InputCurrency({
@@ -22,6 +23,7 @@ function InputCurrency({
   onChange = (value: any) => value,
   min,
   max,
+  autofocus,
 }: InputCurrencyProps) {
   const input = useRef<HTMLInputElement>()
   const [formattedValue, setFormmatedValue] = useState(formatToCurrency(value))
@@ -49,6 +51,7 @@ function InputCurrency({
 
   return (
     <Input
+      autofocus={autofocus}
       inputRef={input}
       label={label}
       required={required}
