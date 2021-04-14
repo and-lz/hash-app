@@ -7,33 +7,31 @@ Object {
     <div>
       <label
         class="sc-gsDJrp hULoMr"
-        for="Basic Input field"
       >
         Basic Input
          
+        <input
+          class="sc-bdvvaa jhZXrt"
+          inputmode="numeric"
+          type="text"
+          value="R$ 0,00"
+        />
       </label>
-      <input
-        class="sc-bdvvaa jhZXrt"
-        id="Basic Input field"
-        type="text"
-        value="R$ 0,00"
-      />
     </div>
   </body>,
   "container": <div>
     <label
       class="sc-gsDJrp hULoMr"
-      for="Basic Input field"
     >
       Basic Input
        
+      <input
+        class="sc-bdvvaa jhZXrt"
+        inputmode="numeric"
+        type="text"
+        value="R$ 0,00"
+      />
     </label>
-    <input
-      class="sc-bdvvaa jhZXrt"
-      id="Basic Input field"
-      type="text"
-      value="R$ 0,00"
-    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

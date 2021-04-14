@@ -10,39 +10,36 @@ Object {
       >
         <label
           class="sc-eCImvq bcHqYm"
-          for="Informe o valor da renda field"
         >
           Informe o valor da renda
            
           *
+          <input
+            class="sc-hKwCoD krFXzP"
+            inputmode="numeric"
+            required=""
+            type="text"
+            value="R$ 1.000,00"
+          />
         </label>
-        <input
-          class="sc-hKwCoD krFXzP"
-          id="Informe o valor da renda field"
-          required=""
-          type="text"
-          value="R$ 1.000,00"
-        />
         <span
           class="sc-dkPtyc bevlEB"
         />
         <label
           class="sc-eCImvq bcHqYm"
-          for="Em quantas parcelas field"
         >
           Em quantas parcelas
            
           *
+          <input
+            class="sc-hKwCoD krFXzP"
+            max="12"
+            min="1"
+            required=""
+            type="number"
+            value="12"
+          />
         </label>
-        <input
-          class="sc-hKwCoD krFXzP"
-          id="Em quantas parcelas field"
-          max="12"
-          min="1"
-          required=""
-          type="number"
-          value="12"
-        />
         <div
           class="sc-jRQAMF VyLUY"
         >
@@ -53,20 +50,18 @@ Object {
         />
         <label
           class="sc-eCImvq bcHqYm"
-          for="Informe o percentual de MDR field"
         >
           Informe o percentual de MDR
            
           *
+          <input
+            class="sc-hKwCoD krFXzP"
+            min="0"
+            required=""
+            type="number"
+            value="1"
+          />
         </label>
-        <input
-          class="sc-hKwCoD krFXzP"
-          id="Informe o percentual de MDR field"
-          min="0"
-          required=""
-          type="number"
-          value="1"
-        />
         <span
           class="sc-dkPtyc bevlEB"
         />
@@ -84,39 +79,36 @@ Object {
     >
       <label
         class="sc-eCImvq bcHqYm"
-        for="Informe o valor da renda field"
       >
         Informe o valor da renda
          
         *
+        <input
+          class="sc-hKwCoD krFXzP"
+          inputmode="numeric"
+          required=""
+          type="text"
+          value="R$ 1.000,00"
+        />
       </label>
-      <input
-        class="sc-hKwCoD krFXzP"
-        id="Informe o valor da renda field"
-        required=""
-        type="text"
-        value="R$ 1.000,00"
-      />
       <span
         class="sc-dkPtyc bevlEB"
       />
       <label
         class="sc-eCImvq bcHqYm"
-        for="Em quantas parcelas field"
       >
         Em quantas parcelas
          
         *
+        <input
+          class="sc-hKwCoD krFXzP"
+          max="12"
+          min="1"
+          required=""
+          type="number"
+          value="12"
+        />
       </label>
-      <input
-        class="sc-hKwCoD krFXzP"
-        id="Em quantas parcelas field"
-        max="12"
-        min="1"
-        required=""
-        type="number"
-        value="12"
-      />
       <div
         class="sc-jRQAMF VyLUY"
       >
@@ -127,20 +119,18 @@ Object {
       />
       <label
         class="sc-eCImvq bcHqYm"
-        for="Informe o percentual de MDR field"
       >
         Informe o percentual de MDR
          
         *
+        <input
+          class="sc-hKwCoD krFXzP"
+          min="0"
+          required=""
+          type="number"
+          value="1"
+        />
       </label>
-      <input
-        class="sc-hKwCoD krFXzP"
-        id="Informe o percentual de MDR field"
-        min="0"
-        required=""
-        type="number"
-        value="1"
-      />
       <span
         class="sc-dkPtyc bevlEB"
       />

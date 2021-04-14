@@ -42,22 +42,21 @@ function Input({
 }: InputProps) {
   return (
     <>
-      <Label htmlFor={`${label} field`}>
+      <Label>
         {label} {required && '*'}
+        <InputField
+          ref={inputRef}
+          min={min}
+          max={max}
+          required={required}
+          value={value}
+          onChange={e => onChange(e.currentTarget.value)}
+          onBlur={e => onBlur(e.currentTarget.value)}
+          onClick={() => onClick()}
+          type={type}
+          inputMode={inputmode}
+        />
       </Label>
-      <InputField
-        ref={inputRef}
-        id={`${label} field`}
-        min={min}
-        max={max}
-        required={required}
-        value={value}
-        onChange={e => onChange(e.currentTarget.value)}
-        onBlur={e => onBlur(e.currentTarget.value)}
-        onClick={() => onClick()}
-        type={type}
-        inputMode={inputmode}
-      />
       {addon && <Addon>{addon}</Addon>}
     </>
   )
