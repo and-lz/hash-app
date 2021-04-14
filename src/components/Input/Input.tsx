@@ -15,6 +15,15 @@ interface InputProps {
   max?: number
   placeholder?: 'string'
   inputRef?: any
+  inputmode?:
+    | 'text'
+    | 'none'
+    | 'tel'
+    | 'url'
+    | 'email'
+    | 'numeric'
+    | 'decimal'
+    | 'search'
 }
 
 function Input({
@@ -29,6 +38,7 @@ function Input({
   onBlur = (value: any) => value,
   onChange = (value: any) => value,
   onClick = () => {},
+  inputmode,
 }: InputProps) {
   return (
     <>
@@ -46,6 +56,7 @@ function Input({
         onBlur={e => onBlur(e.currentTarget.value)}
         onClick={() => onClick()}
         type={type}
+        inputMode={inputmode}
       />
       {addon && <Addon>{addon}</Addon>}
     </>

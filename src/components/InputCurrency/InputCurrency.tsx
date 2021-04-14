@@ -57,6 +57,7 @@ function InputCurrency({
       onChange={onChangeInternal}
       onBlur={onBlurInternal}
       onClick={onClick}
+      inputmode="numeric"
     />
   )
 }
