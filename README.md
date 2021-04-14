@@ -5,7 +5,7 @@ Application to calculate anticipation values, based on an amount, installments a
 It is possible to customize the days the application will calculate, passing props to the calulator page, in `src/index.ts`:
 
 ```javascript
-<CalculatorPage antecipationDays={[1, 15, 30, 90]} />
+<CalculatorPage anticipationDays={[1, 15, 30, 90]} />
 ```
 
 ## Available Scripts

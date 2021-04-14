@@ -1,9 +1,9 @@
 import axios from 'axios'
-import APIAntecipation from './APIAntecipation'
+import APIAnticipation from './APIAnticipation'
 
 jest.mock('axios')
 
-describe('APIAntecipation', () => {
+describe('APIAnticipation', () => {
   const URL = 'https://frontend-challenge-7bu3nxh76a-uc.a.run.app'
   const params = {
     amount: 2000,
@@ -22,7 +22,7 @@ describe('APIAntecipation', () => {
   }
 
   beforeEach(async () => {
-    await APIAntecipation(params)
+    await APIAnticipation(params)
   })
   it('Should call api with correct url and parameters passed', async () => {
     expect(axios.post).toBeCalledWith(URL, params, config)
@@ -31,7 +31,7 @@ describe('APIAntecipation', () => {
     expect(axios.get).toBeCalledTimes(0)
   })
   it('Should convert params to the expected format', async () => {
-    await APIAntecipation(paramsWithWrongTypes)
+    await APIAnticipation(paramsWithWrongTypes)
     expect(axios.post).toHaveBeenLastCalledWith(URL, params, config)
   })
 })

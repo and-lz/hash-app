@@ -1,5 +1,5 @@
 import { fireEvent, render, RenderResult } from '@testing-library/react'
-import APIAntecipation from 'infrastructure/api/APIAntecipation/APIAntecipation'
+import APIAnticipation from 'infrastructure/api/APIAnticipation/APIAnticipation'
 import { removeWhitespaceInString } from 'infrastructure/sanitization/whitespace'
 import React from 'react'
 import { act } from 'react-dom/test-utils'
@@ -13,9 +13,9 @@ const amountLabel = 'Informe o valor da renda *'
 const installmentsLabel = 'Em quantas parcelas *'
 const mdrLabel = 'Informe o percentual de MDR *'
 
-jest.mock('infrastructure/api/APIAntecipation/APIAntecipation')
-const mockedAPIAntecipation = APIAntecipation as jest.MockedFunction<
-  typeof APIAntecipation
+jest.mock('infrastructure/api/APIAnticipation/APIAnticipation')
+const mockedAPIAnticipation = APIAnticipation as jest.MockedFunction<
+  typeof APIAnticipation
 >
 
 describe('<CalculatorPage />', () => {
@@ -32,7 +32,7 @@ describe('<CalculatorPage />', () => {
   beforeEach(() => {
     jest.restoreAllMocks()
 
-    component = render(<CalculatorPage antecipationDays={[1, 15, 30, 90]} />)
+    component = render(<CalculatorPage anticipationDays={[1, 15, 30, 90]} />)
     getByText = component.getByText
     queryByText = component.queryByText
     getByLabelText = component.getByLabelText
@@ -52,7 +52,7 @@ describe('<CalculatorPage />', () => {
   })
   describe('Renderization', () => {
     test('Should render page with title', () => {
-      getByText('Simule sua antecipação')
+      getByText('Simule sua anticipação')
     })
     test('Should match snapshot', () => {
       expect(component).toMatchSnapshot()
@@ -68,7 +68,7 @@ describe('<CalculatorPage />', () => {
     test('Should present the error modal, after a failing request to the api', async () => {
       fillCalculatorFieldsWithValidValues()
 
-      mockedAPIAntecipation.mockRejectedValue('')
+      mockedAPIAnticipation.mockRejectedValue('')
 
       await act(async () => {
         fireEvent.click(submitButton)
@@ -76,10 +76,10 @@ describe('<CalculatorPage />', () => {
 
       getByText(errorModalTitle)
     })
-    test('Should present antecipation values, after a successful request to the api', async () => {
+    test('Should present anticipation values, after a successful request to the api', async () => {
       fillCalculatorFieldsWithValidValues()
 
-      mockedAPIAntecipation.mockResolvedValue({
+      mockedAPIAnticipation.mockResolvedValue({
         data: {
           // @ts-ignore
           1: 2000,

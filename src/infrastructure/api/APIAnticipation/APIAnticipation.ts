@@ -3,25 +3,25 @@ import api from '../api'
 
 const URL = 'https://frontend-challenge-7bu3nxh76a-uc.a.run.app'
 
-interface APIAntecipationProps {
+interface APIAnticipationProps {
   amount: number | string
   installments: number | string
   mdr: number | string
   days: number[]
 }
 
-interface APIAntecipationResponse {
+interface APIAnticipationResponse {
   data: {
     [key: number]: number
   }
 }
 
-async function APIAntecipation({
+async function APIAnticipation({
   amount,
   installments,
   mdr,
   days,
-}: APIAntecipationProps): Promise<AxiosResponse<APIAntecipationResponse>> {
+}: APIAnticipationProps): Promise<AxiosResponse<APIAnticipationResponse>> {
   return await axios.post(
     URL,
     {
@@ -34,4 +34,4 @@ async function APIAntecipation({
   )
 }
 
-export default APIAntecipation
+export default APIAnticipation
